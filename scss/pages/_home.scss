@@ -1,0 +1,37 @@
+@use "../layout/header" as *;
+@use "../layout/navigation" as *;
+
+
+header {
+    nav {
+        @extend %nav;
+    }
+
+    .header__content {
+        @extend %header__home;
+
+        .location {
+            &__icon {
+
+            }
+            &__text {
+
+            }
+        }
+
+        .explore {
+            &__title {
+
+            }
+            &__text {
+
+            }
+            &__button {
+                button {
+                    
+                }
+            }
+        }
+    }
+}
+
