@@ -1,0 +1,49 @@
+
+@use "../components/buttons" as *;
+
+@use "../abstract/mixins" as *;
+@use "../abstract/variables" as *;
+
+%header__home {
+
+    //align items in center//
+    @include allCenter;
+    
+    .location {
+        @include flexBox(15,row,center,center);
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+        i {
+            font-size: 15px;
+        }
+        input {
+            width: 100px;
+            height: 100%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-weight: 600;
+        }
+    }
+
+    .explore {
+        @include flexBox(15,column,center,center);
+        padding: 40px 0px;
+  
+        &__title {
+            width: 60%;
+            font-weight: 600;
+            font-size: var(--fs-500);
+        }
+        &__text {
+            width: 80%;
+            font-size: var(--fs-300);
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        &__button {
+            @extend %button__home;
+        }
+    }
+}

@@ -31,4 +31,29 @@
       @error 'No value found for `#{$breakpoint}`. '
            + 'Please make sure it is defined in `$breakpoints` map.';
     }
-  }
+}
+
+/// FlexBox
+/// @acces public
+/// @param {String} $direction - direction row, column
+/// @param {String} $justify - position justify-content
+/// @param {String} $align - Position align-item
+/// @param {Int} $gap - gap
+/// @require $direction
+/// @require $justify
+/// @require $align
+@mixin flexBox($gap,$direction,$justify,$align) {
+  display: flex;
+  gap: $gap + 0px;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin allCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

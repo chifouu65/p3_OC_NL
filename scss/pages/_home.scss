@@ -1,5 +1,7 @@
 @use "../layout/header" as *;
 @use "../layout/navigation" as *;
+@use "../layout/footer" as *;
+@use "../components/articles" as *;
 
 header {
     nav {
@@ -11,3 +13,37 @@ header {
     }
 }
 
+main {
+
+    .function {
+        padding: 0 20px;
+        &__title {
+            padding: 40px 0px;
+            font-size: var(--fs-500);
+            font-weight: 600;
+        }
+
+        &__content {
+            @extend %article_function;
+        }
+
+    }
+
+    .restaurant {
+        background-color: var(--clr-bg-100);
+        padding: 0 20px;
+        &__title {
+            padding: 40px 0px;
+            font-size: var(--fs-500);
+            font-weight: 600;
+        }
+        &__content {
+            @extend %article_restaurants;
+            padding-bottom: 40px; 
+        }
+    }
+}
+
+footer {
+    @extend %footer;
+}

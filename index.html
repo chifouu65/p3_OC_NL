@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>OhMyFood | HomePage</title>
     <!--FontAwesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./scss/main.css">
@@ -17,21 +17,17 @@
             <h1 class="title" accesskey="h1">ohmyfood</h1>
         </nav>
 
-        <section class="nav">
+        <section class="header__content bg-bg-100">
             
-            <div class="location">
-                <div class="location__icon">
-                    <i></i>
-                </div>
-                <div class="location__text">
-                    <input type="text" name="Paris, BelleVille" placeholder="Paris, BelleVille">
-                </div>
+            <div class="location bg-bg-200">
+                <i class="fa-solid fa-location-dot"></i> 
+                <input type="text" name="Paris, BelleVille" placeholder="Paris, BelleVille">
             </div>
 
             <div class="explore">
-                <div class="explore__title">Réservez le menu qyu vous convient</div>
+                <div class="explore__title">Réservez le menu qui vous convient</div>
                 <div class="explore__text">Découvre des restaurants d'exeption, séléctionnées par nos soins.</div>
-                <div class="explore__button"><button type="post">Explorer nos restaurants</button></div>
+                <div class="explore__button"><a href="/">Explorer nos restaurants</a></div>
             </div>
 
         </section>
@@ -46,19 +42,25 @@
             <div class="function__content">
 
                 <div class="function__article">
-                    <div class="number"></div>
-                    <div class="icon"></div>
-                    <div class="text"></div>
+                    <div class="number">1</div>
+                    <article class="bg-bg-100">
+                        <div class="icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <div class="text">Choisissez un restaurant</div>
+                    </article>
                 </div>
                 <div class="function__article">
-                    <div class="number"></div>
-                    <div class="icon"></div>
-                    <div class="text"></div>
+                    <div class="number">2</div>
+                    <article class="bg-bg-100">
+                        <div class="icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <div class="text">Composez votre menu</div>
+                    </article>
                 </div>
                 <div class="function__article">
-                    <div class="number"></div>
-                    <div class="icon"></div>
-                    <div class="text"></div>
+                    <div class="number">3</div>
+                    <article class="bg-bg-100">
+                        <div class="icon"><i class="fa-solid fa-store"></i></div>
+                        <div class="text">Dégustez au restaurant</div>
+                    </article>
                 </div>
             </div>
 
@@ -68,19 +70,81 @@
             <div class="restaurant__title">Restaurants</div>
 
             <div class="restaurant__content">
-                <div class="restaurants__article">
+
+                <div class="restaurant__content__article">
                     <aside>Nouveau</aside>
-                    <div class="img"></div>
+                    <div class="img"><img src="./assets/img/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" srcset=""></div>
                     <div class="buttom">
                         <div class="left">
-                            <div class="left__title"></div>
-                            <div class="left__text"></div>
+                            <div class="left__title">La palette du goût</div>
+                            <div class="left__text">Ménilmontant</div>
                         </div>
                         <div class="right">
-                            <i></i>
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            viewBox="0 0 512 512"
+                            >
+                                <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
+                            </svg>
                         </div>
                     </div>
                 </div>
+
+                <div class="restaurant__content__article">
+                    <aside>Nouveau</aside>
+                    <div class="img"><img src="./assets/img/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" srcset=""></div>
+                    <div class="buttom">
+                        <div class="left">
+                            <div class="left__title">La note enchantée</div>
+                            <div class="left__text">Charonne</div>
+                        </div>
+                        <div class="right">
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            viewBox="0 0 512 512"
+                            >
+                                <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="restaurant__content__article">
+                    <div class="img"><img src="./assets/img/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française" srcset=""></div>
+                    <div class="buttom">
+                        <div class="left">
+                            <div class="left__title">A la française</div>
+                            <div class="left__text">Cité Rouge</div>
+                        </div>
+                        <div class="right">
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            viewBox="0 0 512 512"
+                            >
+                                <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="restaurant__content__article">
+                    <div class="img"><img src="./assets/img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens" srcset=""></div>
+                    <div class="buttom">
+                        <div class="left">
+                            <div class="left__title">Le délice des sens</div>
+                            <div class="left__text">Folie-Mélicourt</div>
+                        </div>
+                        <div class="right">
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            viewBox="0 0 512 512"
+                            >
+                                <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            
             </div>
         </section>
     </main>
@@ -88,9 +152,9 @@
     <footer>
         <div class="title">ohmyfood</div>
 
-        <div class="text" style="list-style: none;">
-            <li>Proposer un restaurant</li>
-            <li>Devenir partenaire</li>
+        <div class="text">
+            <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
+            <li><i class="fa-solid fa-pen-nib"></i>Devenir partenaire</li>
             <li>Mentions légales</li>
             <li>Contact</li>
         </div>

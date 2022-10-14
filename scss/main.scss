@@ -1,6 +1,4 @@
-
 @charset 'utf-8';
-
 
 @use "./abstract/functions" as *;
 @use "./abstract/mixins" as *;
@@ -14,8 +12,7 @@
 
 @use "./components/buttons" as *;
 @use "./components/carousel" as *;
-@use "./components/cover" as *;
-@use "./components/dropdown" as *;
+@use "./components/carousel" as *;
 
 @use "./layout/footer" as *;
 @use "./layout/forms" as *;
@@ -30,9 +27,6 @@
 
 @use "./themes/theme" as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-
 :root {
     //fais une map sur la list de colors dans le file
     @each $color, $shades in $colors {
@@ -40,7 +34,7 @@
             --clr-#{$color}-#{$shade}: #{$value};
         }
     }
-
+    
     @each $screen-size, $font-size in $type-scales {
         @if $screen-size == small {
             @each $size, $value in $font-size {
@@ -64,6 +58,9 @@
         }
     }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 body {
     font-family: 'Roboto', sans-serif;

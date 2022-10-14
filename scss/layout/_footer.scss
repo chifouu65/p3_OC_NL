@@ -1,0 +1,26 @@
+@use "../abstract/mixins" as *;
+
+%footer {
+    @include flexBox(20,column,none,none);
+    padding: 20px;
+    padding-bottom: 40px;
+    background-color: var(--clr-bg-300);
+    color: white;
+    .title {
+        font-size: var(--fs-400);
+        font-family: "Shrikhand", cursive;
+    }
+
+    .text {
+        @include flexBox(7,column,none,none);
+        li {
+            font-size: var(--fs-300);
+            font-weight: 500;
+            @include flexBox(10,row,none,none);
+            i {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+}
