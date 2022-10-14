@@ -1,0 +1,137 @@
+/*
+
+.foo {
+  color: red;
+
+  @include respond-to('medium') {
+    color: blue;
+  }
+}
+
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1 {
+  padding: 20px;
+}
+
+:root {
+  --clr-primary-100: hsl(14deg, 100%, 80%);
+  --clr-primary-200: hsl(14deg, 100%, 70%);
+  --clr-primary-300: hsl(14deg, 100%, 60%);
+  --clr-primary-400: hsl(14deg, 100%, 40%);
+  --clr-primary-500: hsl(14deg, 100%, 20%);
+  --clr-article-100: hsl(122deg, 100%, 80%);
+  --clr-article-200: hsl(122deg, 100%, 70%);
+  --clr-article-300: hsl(122deg, 100%, 60%);
+  --clr-article-400: hsl(122deg, 100%, 40%);
+  --clr-article-500: hsl(122deg, 100%, 20%);
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.563rem;
+  --fs-600: 1.953rem;
+  --fs-700: 2.441rem;
+  --fs-800: 3.052rem;
+}
+@media only screen and (min-width: 40rem) {
+  :root {
+    --fs-300: 1rem;
+    --fs-400: 1.425rem;
+    --fs-500: 2rem;
+    --fs-600: 2.827rem;
+    --fs-700: 4rem;
+    --fs-800: 5.635rem;
+  }
+}
+
+.text-primary-100 {
+  color: hsl(14deg, 100%, 80%);
+}
+
+.text-primary-200 {
+  color: hsl(14deg, 100%, 70%);
+}
+
+.text-primary-300 {
+  color: hsl(14deg, 100%, 60%);
+}
+
+.text-primary-400 {
+  color: hsl(14deg, 100%, 40%);
+}
+
+.text-primary-500 {
+  color: hsl(14deg, 100%, 20%);
+}
+
+.text-article-100 {
+  color: hsl(122deg, 100%, 80%);
+}
+
+.text-article-200 {
+  color: hsl(122deg, 100%, 70%);
+}
+
+.text-article-300 {
+  color: hsl(122deg, 100%, 60%);
+}
+
+.text-article-400 {
+  color: hsl(122deg, 100%, 40%);
+}
+
+.text-article-500 {
+  color: hsl(122deg, 100%, 20%);
+}/*# sourceMappingURL=main.css.map */
