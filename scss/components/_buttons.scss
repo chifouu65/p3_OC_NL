@@ -1,0 +1,13 @@
+@use "../abstract/variables" as *;
+@use "../abstract/placeholders" as *;
+
+%button__home {
+    @extend %shadow;
+    padding: 1rem;
+    border-radius: 25px;
+    background: linear-gradient($linear-bg);
+    a {
+        color: white;
+        font-size: var(--fs-200);
+    }
+}
