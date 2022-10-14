@@ -1,0 +1,9 @@
+nav {
+    padding: 20px;
+    border: red 1px solid;
+    .title {
+        font-family: 'Shrikhand', cursive;
+        font-size: var(--fs-600);
+        text-align: center;
+    }
+}

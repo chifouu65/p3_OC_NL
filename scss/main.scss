@@ -1,4 +1,6 @@
+
 @charset 'utf-8';
+
 
 @use "./abstract/functions" as *;
 @use "./abstract/mixins" as *;
@@ -22,9 +24,14 @@
 @use "./layout/navigation" as *;
 @use "./layout/sidebar" as *;
 
+@use "./pages/menu" as *;
 @use "./pages/home" as *;
 @use "./pages/menu" as *;
+
 @use "./themes/theme" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 :root {
     //fais une map sur la list de colors dans le file
@@ -34,7 +41,7 @@
         }
     }
 
-    @each $screen-size, $font-size in $type-scale {
+    @each $screen-size, $font-size in $type-scales {
         @if $screen-size == small {
             @each $size, $value in $font-size {
                 --fs-#{$size}: #{$value};
@@ -49,11 +56,15 @@
     }
 }
 
+//create class with attrib colors x values
 @each $color, $shades in $colors {
     @each $shade, $value in $shades {
-        .text-#{$color}-#{$shade} {
-            color: $value;
+        .bg-#{$color}-#{$shade} {
+            background-color: $value;
         }
     }
 }
-    
+
+body {
+    font-family: 'Roboto', sans-serif;
+}

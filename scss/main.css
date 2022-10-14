@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /*
 
 .foo {
@@ -63,21 +65,25 @@ table {
   border-spacing: 0;
 }
 
-h1 {
+nav {
   padding: 20px;
+  border: red 1px solid;
+}
+nav .title {
+  font-family: "Shrikhand", cursive;
+  font-size: var(--fs-600);
+  text-align: center;
 }
 
 :root {
-  --clr-primary-100: hsl(14deg, 100%, 80%);
-  --clr-primary-200: hsl(14deg, 100%, 70%);
-  --clr-primary-300: hsl(14deg, 100%, 60%);
-  --clr-primary-400: hsl(14deg, 100%, 40%);
-  --clr-primary-500: hsl(14deg, 100%, 20%);
-  --clr-article-100: hsl(122deg, 100%, 80%);
-  --clr-article-200: hsl(122deg, 100%, 70%);
-  --clr-article-300: hsl(122deg, 100%, 60%);
-  --clr-article-400: hsl(122deg, 100%, 40%);
-  --clr-article-500: hsl(122deg, 100%, 20%);
+  --clr-primary-100: hsl(267deg, 66%, 60%);
+  --clr-primary-200: hsl(267deg, 66%, 50%);
+  --clr-secondary-100: hsl(317deg, 100%, 74%);
+  --clr-secondary-200: hsl(317deg, 100%, 64%);
+  --clr-bg-100: hsl(0deg, 0%, 50%);
+  --clr-bg-200: hsl(0deg, 0%, 30%);
+  --clr-bg-300: hsl(0deg, 0%, 20%);
+  --clr-article-100: hsl(165deg, 56%, 74%);
   --fs-300: 1rem;
   --fs-400: 1.125rem;
   --fs-500: 1.563rem;
@@ -96,42 +102,38 @@ h1 {
   }
 }
 
-.text-primary-100 {
-  color: hsl(14deg, 100%, 80%);
+.bg-primary-100 {
+  background-color: hsl(267deg, 66%, 60%);
 }
 
-.text-primary-200 {
-  color: hsl(14deg, 100%, 70%);
+.bg-primary-200 {
+  background-color: hsl(267deg, 66%, 50%);
 }
 
-.text-primary-300 {
-  color: hsl(14deg, 100%, 60%);
+.bg-secondary-100 {
+  background-color: hsl(317deg, 100%, 74%);
 }
 
-.text-primary-400 {
-  color: hsl(14deg, 100%, 40%);
+.bg-secondary-200 {
+  background-color: hsl(317deg, 100%, 64%);
 }
 
-.text-primary-500 {
-  color: hsl(14deg, 100%, 20%);
+.bg-bg-100 {
+  background-color: hsl(0deg, 0%, 50%);
 }
 
-.text-article-100 {
-  color: hsl(122deg, 100%, 80%);
+.bg-bg-200 {
+  background-color: hsl(0deg, 0%, 30%);
 }
 
-.text-article-200 {
-  color: hsl(122deg, 100%, 70%);
+.bg-bg-300 {
+  background-color: hsl(0deg, 0%, 20%);
 }
 
-.text-article-300 {
-  color: hsl(122deg, 100%, 60%);
+.bg-article-100 {
+  background-color: hsl(165deg, 56%, 74%);
 }
 
-.text-article-400 {
-  color: hsl(122deg, 100%, 40%);
-}
-
-.text-article-500 {
-  color: hsl(122deg, 100%, 20%);
+body {
+  font-family: "Roboto", sans-serif;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,11 @@
+/* 
+@each $type-scale, $shades in $type-scales {
+    @each $shade, $value in $shades {
+        .fs-#{$type-scale}-#{$shade} {
+            font-size: $value;
+        }
+    }
+}
+*/
+
+/*pourquoi les coommentaire font des erreur en sass ? */
