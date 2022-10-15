@@ -36,6 +36,10 @@
 
             &:hover {
                 background: linear-gradient(90deg, rgba(255,121,218,0.2544642857142857) 0%, rgba(147,86,220,0.2566964285714286) 100%);
+                i {
+                    color: var(--clr-primary-200);
+                }
+            
             }
 
             .icon {
