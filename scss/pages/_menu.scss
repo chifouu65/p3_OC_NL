@@ -1,0 +1,157 @@
+@use "../components/buttons" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/variables" as *;
+@use "../abstract/placeholders" as *;
+
+header {
+    nav {
+        i {
+            position: absolute;
+            top:20px;
+            font-size: 25px;
+        }
+    }
+
+    .img {
+        width: 100%;
+        img {
+            width: 100%;
+            object-fit: cover;
+            max-height: 300px;
+        }
+    }
+}
+
+main {
+    @include flexBox(0,column,space-between,none);
+    &__img  {
+        z-index: 0;
+        position: absolute;
+        img {
+            width: 100%;
+            max-height: cover;
+        }
+    }
+   
+    .container {
+        @include flexBox(20,column,space-between,none);
+        border-radius: $borderR-top;
+        z-index: 1;
+        background-color: white;
+        margin-top: 180px;
+        padding:40px 20px;
+        .menu__title {
+            @include flexBox(0,row,space-between,none);
+            .text {
+                @extend %title; 
+            }
+        }
+
+        .box {
+          
+            &__title {
+                @extend %title__menu;
+                border-bottom: 3px solid var(--clr-article-100);
+                padding:5px 0;
+                width: 40px;
+            }
+            &__menu {
+                margin:20px 0;
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                @extend %shadow;
+                border-radius: $borderR;
+
+                &__text {
+                    @include flexBox(0,column,space-between,none);
+                    width: 100%;
+                    padding: 10px 0px 10px 10px;
+                    
+                    .title {
+                        font-weight: 600;
+                        font-size: 18px;
+                    }
+                    .desc {
+                        @extend %text__menu;
+                        @include flexBox(0,row,space-between,none);
+                        align-items: baseline;
+                        .price {
+                            font-weight: 600;
+                            margin: 10px  10px 0 10px;
+                        }
+                    }
+                }
+
+               
+                &__check {
+                   border-radius: $borderR-right;
+                   background-color: var(--clr-article-100);
+                   display: inline;
+                   justify-content: center;
+                   align-items: center;
+                   width: 0px;
+
+                   svg {
+                    width: 15px;
+                    padding: 5px;
+                    fill: var(--clr-article-100);
+                    background-color: white;
+                    border-radius: $borderR-50;
+                   }
+                }
+
+                &:hover {
+                    
+                    .box__menu__check {
+                        width: 90px;
+                        display: flex;
+                        transform: translateX(0);
+                        transition: 0.5s ease-in-out;
+                        svg {
+                            animation: 0.35s rotate 0.15s linear;
+                        }
+                    }
+                }
+                
+                @keyframes rotate {
+                    0% {
+                      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+                      transform: rotate3d(0, 0, 1, 0deg);
+                    }
+                    25% {
+                      -webkit-transform: rotate3d(0, 0, 1, 90deg);
+                      transform: rotate3d(0, 0, 1, 90deg);
+                    }
+                    50% {
+                      -webkit-transform: rotate3d(0, 0, 1, 180deg);
+                      transform: rotate3d(0, 0, 1, 180deg);
+                    }
+                    75% {
+                      -webkit-transform: rotate3d(0, 0, 1, 270deg);
+                      transform: rotate3d(0, 0, 1, 270deg);
+                    }
+                    100% {
+                      -webkit-transform: rotate3d(0, 0, 1, 360deg);
+                      transform: rotate3d(0, 0, 1, 360deg);
+                    }
+                }
+            }
+        }
+        
+        .btn__menu {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            &__btn {
+                min-width: 170px;
+                @extend %button__menu;
+            }
+        }
+    }
+
+}
+
+footer {
+    //
+}

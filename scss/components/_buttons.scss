@@ -12,6 +12,21 @@
     }
 
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
+    }
+}
+
+%button__menu {
+    @extend %shadow;
+    padding: 1rem;
+    border-radius: 25px;
+    background: linear-gradient($linear-bg);
+    a {
+        color: white;
+        font-size: var(--fs-200);
+    }
+
+    &:hover {
+        transform: scale(1.05);
     }
 }

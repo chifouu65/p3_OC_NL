@@ -13,7 +13,8 @@
 
     .text {
         @include flexBox(7,column,none,none);
-        li {
+        a {
+            color: white;
             font-size: var(--fs-300);
             font-weight: 500;
             @include flexBox(10,row,none,none);

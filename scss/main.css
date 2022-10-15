@@ -1,5 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@-webkit-keyframes transIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+@keyframes transIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
 /*
 animation get stroke set 0 and size 100% to O to 100 == opacity 1
 */
@@ -53,26 +73,45 @@ animation get stroke set 0 and size 100% to O to 100 == opacity 1
     fill: var(--clr-secondary-200);
   }
 }
-@-webkit-keyframes transIn {
-  from {
-    opacity: 0;
-    transform: rotateX(-10deg);
-  }
-  to {
-    opacity: 1;
-    transform: rotate(0);
-  }
+.heart {
+  fill: transparent;
+  stroke: var(--clr-secondary-200);
+  stroke-width: 20;
+  cursor: pointer;
+  position: relative;
 }
-@keyframes transIn {
-  from {
-    opacity: 0;
-    transform: rotateX(-10deg);
-  }
-  to {
-    opacity: 1;
-    transform: rotate(0);
-  }
+.heart svg {
+  overflow: visible;
+  width: 40px;
 }
+.heart svg path {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1550;
+  transform-origin: center;
+}
+.heart__background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  stroke: none;
+}
+.heart__main:hover path {
+  -webkit-animation: stroke-animation 2s ease-in-out forwards;
+          animation: stroke-animation 2s ease-in-out forwards;
+}
+.heart__main:hover ~ .heart__background path path {
+  -webkit-animation: stroke-animation 2s ease-in-out forwards;
+          animation: stroke-animation 2s ease-in-out forwards;
+}
+.heart svg {
+  width: 30px;
+  height: 30px;
+}
+.heart svg:hover {
+  transform: scale(1.1);
+}
+
 /*
 
 .foo {
@@ -84,11 +123,27 @@ animation get stroke set 0 and size 100% to O to 100 == opacity 1
 }
 
 */
-main .function__content .function__article article, main .restaurant__content .restaurant__content__article, header nav, header .header__content .explore__button {
+main .function__content .function__article article, main .restaurant__content .restaurant__content__article, main .container .box__menu, header nav, main .container .btn__menu__btn, header .header__content .explore__button {
   box-shadow: 5px 9px 18px -3px rgba(0, 0, 0, 0.29);
 }
-main .function__content .function__article article:hover, main .restaurant__content .restaurant__content__article:hover, header nav:hover, header .header__content .explore__button:hover {
+main .function__content .function__article article:hover, main .restaurant__content .restaurant__content__article:hover, main .container .box__menu:hover, header nav:hover, main .container .btn__menu__btn:hover, header .header__content .explore__button:hover {
   box-shadow: 5px 9px 18px -3px rgba(0, 0, 0, 0.39);
+}
+
+main .container .menu__title .text {
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+}
+
+main .container .box__title {
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+main .container .box__menu__text .desc {
+  font-size: 14px;
+  font-weight: 300;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -147,6 +202,7 @@ table {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 li {
@@ -171,7 +227,20 @@ header .header__content .explore__button a {
   font-size: var(--fs-200);
 }
 header .header__content .explore__button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+main .container .btn__menu__btn {
+  padding: 1rem;
+  border-radius: 25px;
+  background: linear-gradient(0deg, var(--clr-primary-100) 0%, var(--clr-secondary-200) 100%);
+}
+main .container .btn__menu__btn a {
+  color: white;
+  font-size: var(--fs-200);
+}
+main .container .btn__menu__btn:hover {
+  transform: scale(1.05);
 }
 
 footer {
@@ -196,7 +265,8 @@ footer .text {
   justify-content: none;
   align-items: none;
 }
-footer .text li {
+footer .text a {
+  color: white;
   font-size: var(--fs-300);
   font-weight: 500;
   display: flex;
@@ -205,7 +275,7 @@ footer .text li {
   justify-content: none;
   align-items: none;
 }
-footer .text li i {
+footer .text a i {
   width: 15px;
   height: 15px;
 }
@@ -264,6 +334,160 @@ header nav .title {
   font-family: "Shrikhand", cursive;
   font-size: var(--fs-500);
   text-align: center;
+}
+
+header nav i {
+  position: absolute;
+  top: 20px;
+  font-size: 25px;
+}
+header .img {
+  width: 100%;
+}
+header .img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 300px;
+}
+
+main {
+  display: flex;
+  gap: 0px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: none;
+}
+main__img {
+  z-index: 0;
+  position: absolute;
+}
+main__img img {
+  width: 100%;
+  max-height: cover;
+}
+main .container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: none;
+  border-radius: 20px 20px 0 0;
+  z-index: 1;
+  background-color: white;
+  margin-top: 180px;
+  padding: 40px 20px;
+}
+main .container .menu__title {
+  display: flex;
+  gap: 0px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: none;
+}
+main .container .box__title {
+  border-bottom: 3px solid var(--clr-article-100);
+  padding: 5px 0;
+  width: 40px;
+}
+main .container .box__menu {
+  margin: 20px 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+}
+main .container .box__menu__text {
+  display: flex;
+  gap: 0px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: none;
+  width: 100%;
+  padding: 10px 0px 10px 10px;
+}
+main .container .box__menu__text .title {
+  font-weight: 600;
+  font-size: 18px;
+}
+main .container .box__menu__text .desc {
+  display: flex;
+  gap: 0px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: none;
+  align-items: baseline;
+}
+main .container .box__menu__text .desc .price {
+  font-weight: 600;
+  margin: 10px 10px 0 10px;
+}
+main .container .box__menu__check {
+  border-radius: 0 10px 10px 0;
+  background-color: var(--clr-article-100);
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  width: 0px;
+}
+main .container .box__menu__check svg {
+  width: 15px;
+  padding: 5px;
+  fill: var(--clr-article-100);
+  background-color: white;
+  border-radius: 50%;
+}
+main .container .box__menu:hover .box__menu__check {
+  width: 90px;
+  display: flex;
+  transform: translateX(0);
+  transition: 0.5s ease-in-out;
+}
+main .container .box__menu:hover .box__menu__check svg {
+  -webkit-animation: 0.35s rotate 0.15s linear;
+          animation: 0.35s rotate 0.15s linear;
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  25% {
+    transform: rotate3d(0, 0, 1, 90deg);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  75% {
+    transform: rotate3d(0, 0, 1, 270deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  25% {
+    transform: rotate3d(0, 0, 1, 90deg);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  75% {
+    transform: rotate3d(0, 0, 1, 270deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+main .container .btn__menu {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+main .container .btn__menu__btn {
+  min-width: 170px;
 }
 
 main .function__content {
@@ -385,45 +609,15 @@ main .restaurant__content .restaurant__content__article .buttom .left__title {
 main .restaurant__content .restaurant__content__article .buttom .left__text {
   font-size: var(--fs-300)10px;
 }
-main .restaurant__content .restaurant__content__article .buttom .heart {
-  fill: transparent;
-  stroke: #ff79da;
-  stroke-width: 20;
-  cursor: pointer;
-  position: relative;
-}
-main .restaurant__content .restaurant__content__article .buttom .heart svg {
-  overflow: visible;
-  width: 40px;
-}
-main .restaurant__content .restaurant__content__article .buttom .heart svg path {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 1550;
-  transform-origin: center;
-}
-main .restaurant__content .restaurant__content__article .buttom .heart__background {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  stroke: none;
-}
-main .restaurant__content .restaurant__content__article .buttom .heart__main:hover path {
-  -webkit-animation: stroke-animation 2s ease-in-out forwards;
-          animation: stroke-animation 2s ease-in-out forwards;
-}
-main .restaurant__content .restaurant__content__article .buttom .heart__main:hover ~ .restaurant__content .restaurant__content__article .buttom .heart__background path path {
-  -webkit-animation: stroke-animation 2s ease-in-out forwards;
-          animation: stroke-animation 2s ease-in-out forwards;
-}
-main .restaurant__content .restaurant__content__article .buttom .heart svg {
-  width: 30px;
-  height: 30px;
-}
-main .restaurant__content .restaurant__content__article .buttom .heart svg:hover {
-  transform: scale(1.1);
-}
 
+header {
+  -webkit-animation: transIn 1s;
+          animation: transIn 1s;
+}
+main {
+  -webkit-animation: transIn 2s;
+          animation: transIn 2s;
+}
 main .function {
   padding: 0 20px;
 }
@@ -431,6 +625,18 @@ main .function__title {
   padding: 40px 0px;
   font-size: var(--fs-500);
   font-weight: 600;
+}
+main .function .card-1 {
+  -webkit-animation: transIn 2s;
+          animation: transIn 2s;
+}
+main .function .card-2 {
+  -webkit-animation: transIn 2.5s;
+          animation: transIn 2.5s;
+}
+main .function .card-3 {
+  -webkit-animation: transIn 3s;
+          animation: transIn 3s;
 }
 main .restaurant {
   background-color: var(--clr-bg-100);

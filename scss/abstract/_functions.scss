@@ -1,7 +1,7 @@
 
 @mixin heath {
     fill: transparent;
-    stroke: #ff79da;
+    stroke: var(--clr-secondary-200);
     stroke-width: 20;
     cursor: pointer;
     position: relative;
@@ -37,11 +37,23 @@
         }
     }
   }
+
+//article animation
+@keyframes transIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg)
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+
+
 /*
 animation get stroke set 0 and size 100% to O to 100 == opacity 1
 */
-
-
 @keyframes stroke-animation {
     0% {
         stroke-dashoffset: 0;
@@ -73,14 +85,13 @@ animation get stroke set 0 and size 100% to O to 100 == opacity 1
     }
 }
 
-//second animation //
-@keyframes transIn {
-    from {
-        opacity: 0;
-        transform: rotateX(-10deg)
-    }
-    to {
-        opacity: 1;
-        transform: rotate(0);
+.heart {
+    @include heath;
+    svg {
+        width: 30px;
+        height: 30px;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }

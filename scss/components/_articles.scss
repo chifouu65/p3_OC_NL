@@ -5,10 +5,9 @@
 
 %article_function {
     @include flexBox(15,column,none,none);
+    
     padding-bottom: 40px;
-
     .function__article {
-
         @include flexBox(0,row,flex-start,center);
 
         .number {
@@ -100,16 +99,8 @@
                     font-size: var(--fs-300) + 10px;
                 }
             }
-            .heart {
-                @include heath;
-                svg {
-                    width: 30px;
-                    height: 30px;
-                    &:hover {
-                        transform: scale(1.1);
-                    }
-                }
-            }
+            
         }
     }
 }
+
