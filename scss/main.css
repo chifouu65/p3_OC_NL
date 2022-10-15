@@ -221,6 +221,12 @@ header .header__content .explore__button {
   padding: 1rem;
   border-radius: 25px;
   background: linear-gradient(0deg, var(--clr-primary-100) 0%, var(--clr-secondary-200) 100%);
+  text-align: center;
+}
+@media screen and (min-width: 40rem) {
+  header .header__content .explore__button {
+    min-width: 220px;
+  }
 }
 header .header__content .explore__button a {
   color: white;
@@ -258,6 +264,15 @@ footer .title {
   font-size: var(--fs-400);
   font-family: "Shrikhand", cursive;
 }
+@media screen and (min-width: 60rem) {
+  footer {
+    display: flex;
+    gap: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: none;
+  }
+}
 footer .text {
   display: flex;
   gap: 7px;
@@ -265,9 +280,18 @@ footer .text {
   justify-content: none;
   align-items: none;
 }
+@media screen and (min-width: 60rem) {
+  footer .text {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: none;
+  }
+}
 footer .text a {
   color: white;
-  font-size: var(--fs-300);
+  font-size: var(--fs-200);
   font-weight: 500;
   display: flex;
   gap: 10px;
@@ -280,13 +304,6 @@ footer .text a i {
   height: 15px;
 }
 
-header .header__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 header .header__content .location {
   display: flex;
   gap: 15px;
@@ -294,7 +311,7 @@ header .header__content .location {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 15px;
+  padding: 15px 0;
   width: 100%;
 }
 header .header__content .location i {
@@ -314,18 +331,41 @@ header .header__content .explore {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 40px 0px;
+}
+@media screen and (min-width: 60rem) {
+  header .header__content .explore {
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    text-align: start;
+  }
 }
 header .header__content .explore__title {
   width: 60%;
   font-weight: 600;
   font-size: var(--fs-500);
 }
+@media screen and (min-width: 60rem) {
+  header .header__content .explore__title {
+    width: 100%;
+  }
+}
 header .header__content .explore__text {
   width: 80%;
   font-size: var(--fs-300);
   margin-bottom: 10px;
   font-weight: 300;
+}
+@media screen and (min-width: 60rem) {
+  header .header__content .explore__text {
+    width: 100%;
+  }
 }
 header nav {
   padding: 20px;
@@ -381,6 +421,9 @@ main .container .menu__title {
   flex-direction: row;
   justify-content: space-between;
   align-items: none;
+}
+main .container .menu__title .text {
+  font-size: var(--fs-600);
 }
 main .container .box {
   padding: 0px 20px;
@@ -507,6 +550,15 @@ main .function__content {
   align-items: none;
   padding-bottom: 40px;
 }
+@media screen and (min-width: 40rem) {
+  main .function__content {
+    display: flex;
+    gap: 0px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: none;
+  }
+}
 main .function__content .function__article {
   display: flex;
   gap: 0px;
@@ -542,6 +594,11 @@ main .function__content .function__article article {
   margin-right: 15px;
   width: 100%;
 }
+@media screen and (min-width: 40rem) {
+  main .function__content .function__article article {
+    padding: 15px 25px 15px 25px;
+  }
+}
 main .function__content .function__article article:hover {
   background: linear-gradient(90deg, rgba(255, 121, 218, 0.2544642857) 0%, rgba(147, 86, 220, 0.2566964286) 100%);
 }
@@ -574,6 +631,24 @@ main .restaurant__content .restaurant__content__article {
   overflow: hidden;
   border-radius: 20px;
 }
+@media screen and (min-width: 40rem) {
+  main .restaurant__content .restaurant__content__article {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: none;
+  }
+}
+@media screen and (min-width: 60rem) {
+  main .restaurant__content .restaurant__content__article {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: none;
+  }
+}
 main .restaurant__content .restaurant__content__article aside {
   background-color: var(--clr-article-100);
   position: absolute;
@@ -585,15 +660,41 @@ main .restaurant__content .restaurant__content__article aside {
   font-weight: 600;
   border-radius: 5px;
 }
+@media screen and (min-width: 40rem) {
+  main .restaurant__content .restaurant__content__article aside {
+    right: 40px;
+  }
+}
 main .restaurant__content .restaurant__content__article .img {
   max-height: 180px;
   height: 180px;
+}
+@media screen and (min-width: 60rem) {
+  main .restaurant__content .restaurant__content__article .img {
+    min-width: 50%;
+    width: 50%;
+    max-width: 50%;
+  }
 }
 main .restaurant__content .restaurant__content__article .img img {
   max-height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (min-width: 40rem) {
+  main .restaurant__content .restaurant__content__article .img img {
+    min-width: 180px;
+    max-width: 180px;
+    min-height: 180px;
+  }
+}
+@media screen and (min-width: 60rem) {
+  main .restaurant__content .restaurant__content__article .img img {
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 main .restaurant__content .restaurant__content__article .buttom {
   padding: 0 20px;
@@ -603,6 +704,26 @@ main .restaurant__content .restaurant__content__article .buttom {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (min-width: 40rem) {
+  main .restaurant__content .restaurant__content__article .buttom {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 60rem) {
+  main .restaurant__content .restaurant__content__article .buttom {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+  }
+}
 main .restaurant__content .restaurant__content__article .buttom .left {
   padding: 20px 0;
   display: flex;
@@ -611,12 +732,21 @@ main .restaurant__content .restaurant__content__article .buttom .left {
   justify-content: space-between;
   align-items: none;
 }
+@media screen and (min-width: 40rem) {
+  main .restaurant__content .restaurant__content__article .buttom .left {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: none;
+  }
+}
 main .restaurant__content .restaurant__content__article .buttom .left__title {
   font-size: var(--fs-400);
   font-weight: 600;
 }
 main .restaurant__content .restaurant__content__article .buttom .left__text {
-  font-size: var(--fs-300)10px;
+  font-size: var(--fs-300);
 }
 
 header {
@@ -630,10 +760,21 @@ main {
 main .function {
   padding: 0 20px;
 }
+@media screen and (min-width: 40rem) {
+  main .function {
+    padding-bottom: 80px;
+  }
+}
 main .function__title {
   padding: 40px 0px;
   font-size: var(--fs-500);
   font-weight: 600;
+}
+@media screen and (min-width: 40rem) {
+  main .function__title {
+    text-align: center;
+    padding: 80px 0px 40px 0px;
+  }
 }
 main .function .card-1 {
   -webkit-animation: transIn 2s;
@@ -651,10 +792,20 @@ main .restaurant {
   background-color: var(--clr-bg-100);
   padding: 0 20px;
 }
+@media screen and (min-width: 40rem) {
+  main .restaurant {
+    padding: 0 40px;
+  }
+}
 main .restaurant__title {
   padding: 40px 0px;
   font-size: var(--fs-500);
   font-weight: 600;
+}
+@media screen and (min-width: 40rem) {
+  main .restaurant__title {
+    text-align: center;
+  }
 }
 main .restaurant__content {
   padding-bottom: 40px;
@@ -675,17 +826,17 @@ main .restaurant__content {
   --fs-300: 0.9rem;
   --fs-400: 1.125rem;
   --fs-500: 1.463rem;
-  --fs-600: 1.953rem;
+  --fs-600: 1.8rem;
   --fs-700: 2.441rem;
   --fs-800: 3.052rem;
 }
 @media only screen and (min-width: 40rem) {
   :root {
-    --fs-100: 0.82rem;
-    --fs-200: 0.9rem;
-    --fs-300: 1rem;
-    --fs-400: 1.425rem;
-    --fs-500: 1.8rem;
+    --fs-100: 1rem;
+    --fs-200: 1.2rem;
+    --fs-300: 1.5rem;
+    --fs-400: 1.8rem;
+    --fs-500: 2rem;
     --fs-600: 2.827rem;
     --fs-700: 4rem;
     --fs-800: 5.635rem;

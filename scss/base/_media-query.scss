@@ -1,6 +1,6 @@
 $breakpoints: (
     small: 40rem,
-    medium: 65rem
+    medium: 65rem,
 );
 
 @mixin mq($key) {

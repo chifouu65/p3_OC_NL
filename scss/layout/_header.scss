@@ -7,13 +7,13 @@
 %header__home {
 
     //align items in center//
-    @include allCenter;
     
     .location {
         @include flexBox(15,row,center,center);
         text-align: center;
-        padding: 15px;
+        padding: 15px 0;
         width: 100%;
+
         i {
             font-size: 15px;
         }
@@ -29,18 +29,31 @@
 
     .explore {
         @include flexBox(15,column,center,center);
-        padding: 40px 0px;
+        text-align: center;
+        @media screen and (min-width:60rem) {
+            @include flexBox(15,row,center,center);
+            max-width: 1000px;
+            margin: auto;
+            text-align: start;
+        }
   
+        padding: 40px 0px;
         &__title {
             width: 60%;
             font-weight: 600;
             font-size: var(--fs-500);
+            @media screen and (min-width:60rem) {
+                width: 100%;
+            }
         }
         &__text {
             width: 80%;
             font-size: var(--fs-300);
             margin-bottom: 10px;
             font-weight: 300;
+            @media screen and (min-width:60rem) {
+                width: 100%;
+            }
         }
         &__button {
             @extend %button__home;

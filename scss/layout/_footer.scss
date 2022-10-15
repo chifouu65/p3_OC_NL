@@ -11,11 +11,19 @@
         font-family: "Shrikhand", cursive;
     }
 
+    @media screen and (min-width: 60rem) {
+        @include flexBox(0,row,space-between,none);
+    }
+
     .text {
         @include flexBox(7,column,none,none);
+
+        @media screen and (min-width: 60rem) {
+            @include flexBox(20,row,space-between,none);
+        }
         a {
             color: white;
-            font-size: var(--fs-300);
+            font-size: var(--fs-200);
             font-weight: 500;
             @include flexBox(10,row,none,none);
             i {

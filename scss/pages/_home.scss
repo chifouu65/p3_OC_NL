@@ -3,7 +3,7 @@
 @use "../layout/footer" as *;
 @use "../components/articles" as *;
 
-
+@use "../abstract/mixins" as *;
 
 header {
     animation: transIn 1s;
@@ -19,16 +19,24 @@ header {
 main {
     animation: transIn 2s;
     .function {
+        @media screen and (min-width: 40rem) {
+            padding-bottom: 80px;
+        }
+        
         padding: 0 20px;
         &__title {
             padding: 40px 0px;
             font-size: var(--fs-500);
             font-weight: 600;
+
+            @media screen and (min-width: 40rem) {
+                text-align: center;
+                padding: 80px 0px 40px 0px;
+            }
         }
         &__content {
-            @extend %article_function;
+            @extend %article_function;   
         }
-
         .card-1 {
             animation: transIn 2s ;
         }
@@ -44,14 +52,20 @@ main {
     .restaurant {
         background-color: var(--clr-bg-100);
         padding: 0 20px;
+        @media screen and (min-width: 40rem) {
+            padding: 0 40px;
+        }
         &__title {
             padding: 40px 0px;
             font-size: var(--fs-500);
             font-weight: 600;
+            @media screen and (min-width: 40rem) {
+                text-align: center;
+            }
         }
         &__content {
             @extend %article_restaurants;
-            padding-bottom: 40px; 
+            padding-bottom: 40px;
         }
     }
 }
