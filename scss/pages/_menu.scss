@@ -11,36 +11,32 @@ header {
             font-size: 25px;
         }
     }
-
-    .img {
-        width: 100%;
-        img {
-            width: 100%;
-            object-fit: cover;
-            max-height: 300px;
-        }
-    }
 }
 
 main {
     @include flexBox(0,column,space-between,none);
-    &__img  {
-        z-index: 0;
+
+    .menu__img  {
         position: absolute;
+        z-index: -1;
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
         img {
             width: 100%;
-            max-height: cover;
+            object-fit: cover;
         }
     }
    
     .container {
         @include flexBox(20,column,space-between,none);
+        width: 100%;
         border-radius: $borderR-top;
         z-index: 1;
         background-color: white;
-        margin-top: 180px;
-        padding:40px 20px;
+        margin-top: 200px;
         .menu__title {
+            padding: 40px 20px;
             @include flexBox(0,row,space-between,none);
             .text {
                 @extend %title; 
@@ -48,12 +44,13 @@ main {
         }
 
         .box {
-          
+            padding: 0px 20px;
             &__title {
                 @extend %title__menu;
                 border-bottom: 3px solid var(--clr-article-100);
                 padding:5px 0;
                 width: 40px;
+                font-size: var(--fs-300);
             }
             &__menu {
                 margin:20px 0;
@@ -70,13 +67,17 @@ main {
                     
                     .title {
                         font-weight: 600;
-                        font-size: 18px;
+                        font-size: var(--fs-300);
                     }
                     .desc {
                         @extend %text__menu;
                         @include flexBox(0,row,space-between,none);
                         align-items: baseline;
+                        .text {
+                            font-size: var(--fs-200);
+                        }
                         .price {
+                            font-size: var(--fs-200);
                             font-weight: 600;
                             margin: 10px  10px 0 10px;
                         }
@@ -93,7 +94,7 @@ main {
                    width: 0px;
 
                    svg {
-                    width: 15px;
+                    width: 10px;
                     padding: 5px;
                     fill: var(--clr-article-100);
                     background-color: white;
@@ -104,7 +105,7 @@ main {
                 &:hover {
                     
                     .box__menu__check {
-                        width: 90px;
+                        width: 25%;
                         display: flex;
                         transform: translateX(0);
                         transition: 0.5s ease-in-out;
@@ -144,14 +145,18 @@ main {
             justify-content: center;
             text-align: center;
             &__btn {
-                min-width: 170px;
+                a {
+                    font-size: var(--fs-300);
+                }
+                min-width: 120px;
                 @extend %button__menu;
             }
+            padding-bottom: 40px;
         }
     }
 
 }
 
 footer {
-    //
+
 }
