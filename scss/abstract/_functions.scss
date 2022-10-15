@@ -1,0 +1,86 @@
+
+@mixin heath {
+    fill: transparent;
+    stroke: #ff79da;
+    stroke-width: 20;
+    cursor: pointer;
+    position: relative;
+  
+    svg {
+        overflow: visible;
+        width: 40px;
+        path {
+            stroke-dashoffset: 0;
+            stroke-dasharray: 1550;
+            transform-origin: center;
+        }
+    }
+    
+    &__background {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        stroke: none;
+    }
+  
+    &__main:hover {
+        path {
+            animation: stroke-animation 2s ease-in-out forwards;
+        }
+  
+    }
+  
+    &__main:hover ~ &__background path {
+        path {
+            animation: stroke-animation 2s ease-in-out forwards;
+        }
+    }
+  }
+/*
+animation get stroke set 0 and size 100% to O to 100 == opacity 1
+*/
+
+
+@keyframes stroke-animation {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    30% {
+        stroke-dashoffset: 1550;
+    }
+
+    60% {
+        stroke-dashoffset: 3100;
+        fill: transparent;
+        transform: scale(1);
+    }
+
+    80% {
+        fill: var(--clr-secondary-200);
+        transform: scale(1.1);
+    }
+
+
+    80% {
+        fill: var(--clr-secondary-200);
+        transform: scale(1);
+    }
+
+    100% {
+        stroke-dashoffset: 3100;
+        fill: var(--clr-secondary-200);
+    }
+}
+
+//second animation //
+@keyframes transIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg)
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}

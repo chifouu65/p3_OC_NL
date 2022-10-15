@@ -1,6 +1,79 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /*
+animation get stroke set 0 and size 100% to O to 100 == opacity 1
+*/
+@-webkit-keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 1550;
+  }
+  60% {
+    stroke-dashoffset: 3100;
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: var(--clr-secondary-200);
+    transform: scale(1.1);
+  }
+  80% {
+    fill: var(--clr-secondary-200);
+    transform: scale(1);
+  }
+  100% {
+    stroke-dashoffset: 3100;
+    fill: var(--clr-secondary-200);
+  }
+}
+@keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 1550;
+  }
+  60% {
+    stroke-dashoffset: 3100;
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: var(--clr-secondary-200);
+    transform: scale(1.1);
+  }
+  80% {
+    fill: var(--clr-secondary-200);
+    transform: scale(1);
+  }
+  100% {
+    stroke-dashoffset: 3100;
+    fill: var(--clr-secondary-200);
+  }
+}
+@-webkit-keyframes transIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+@keyframes transIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+/*
 
 .foo {
   color: red;
@@ -96,6 +169,9 @@ header .header__content .explore__button {
 header .header__content .explore__button a {
   color: white;
   font-size: var(--fs-200);
+}
+header .header__content .explore__button:hover {
+  transform: scale(1.1);
 }
 
 footer {
@@ -233,6 +309,9 @@ main .function__content .function__article article {
   margin-right: 15px;
   width: 100%;
 }
+main .function__content .function__article article:hover {
+  background: linear-gradient(90deg, rgba(255, 121, 218, 0.2544642857) 0%, rgba(147, 86, 220, 0.2566964286) 100%);
+}
 main .function__content .function__article article .icon {
   text-align: center;
   width: 15px;
@@ -303,9 +382,43 @@ main .restaurant__content .restaurant__content__article .buttom .left__title {
 main .restaurant__content .restaurant__content__article .buttom .left__text {
   font-size: var(--fs-300)10px;
 }
-main .restaurant__content .restaurant__content__article .buttom .right {
-  fill: red;
-  border: 1px solid black;
+main .restaurant__content .restaurant__content__article .buttom .heart {
+  fill: transparent;
+  stroke: #ff79da;
+  stroke-width: 20;
+  cursor: pointer;
+  position: relative;
+}
+main .restaurant__content .restaurant__content__article .buttom .heart svg {
+  overflow: visible;
+  width: 40px;
+}
+main .restaurant__content .restaurant__content__article .buttom .heart svg path {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1550;
+  transform-origin: center;
+}
+main .restaurant__content .restaurant__content__article .buttom .heart__background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  stroke: none;
+}
+main .restaurant__content .restaurant__content__article .buttom .heart__main:hover path {
+  -webkit-animation: stroke-animation 2s ease-in-out forwards;
+          animation: stroke-animation 2s ease-in-out forwards;
+}
+main .restaurant__content .restaurant__content__article .buttom .heart__main:hover ~ .restaurant__content .restaurant__content__article .buttom .heart__background path path {
+  -webkit-animation: stroke-animation 2s ease-in-out forwards;
+          animation: stroke-animation 2s ease-in-out forwards;
+}
+main .restaurant__content .restaurant__content__article .buttom .heart svg {
+  width: 30px;
+  height: 30px;
+}
+main .restaurant__content .restaurant__content__article .buttom .heart svg:hover {
+  transform: scale(1.1);
 }
 
 main .function {

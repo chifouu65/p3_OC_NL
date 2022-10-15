@@ -1,5 +1,7 @@
 @use "../abstract/mixins" as *;
 @use "../abstract/placeholders" as *;
+@use "../abstract/variables" as *;
+@use "../abstract/functions" as *;
 
 %article_function {
     @include flexBox(15,column,none,none);
@@ -31,6 +33,11 @@
             margin-left: 10px;
             margin-right: 15px;
             width: 100%;
+
+            &:hover {
+                background: linear-gradient(90deg, rgba(255,121,218,0.2544642857142857) 0%, rgba(147,86,220,0.2566964285714286) 100%);
+            }
+
             .icon {
                 text-align: center;
                 width: 15px;
@@ -53,10 +60,8 @@
     @include flexBox(20,column,none,none);
     .restaurant__content__article {
         @extend %shadow;
-
         overflow: hidden;
         border-radius: 20px;
-
         aside {
             background-color: var(--clr-article-100);
             position: absolute;
@@ -68,7 +73,6 @@
             font-weight: 600;
             border-radius: 5px;
         }
-
         .img {
             max-height: 180px;
             height: 180px;
@@ -78,7 +82,6 @@
                 object-fit: cover;
             }
         }
-
         .buttom {
             padding:0 20px;
             @include flexBox(0,row,space-between,center);
@@ -89,15 +92,19 @@
                     font-size: var(--fs-400);
                     font-weight: 600;
                 }
-
                 &__text {
                     font-size: var(--fs-300) + 10px;
                 }
             }
-
-            .right {
-                fill: red;
-                border: 1px solid black;
+            .heart {
+                @include heath;
+                svg {
+                    width: 30px;
+                    height: 30px;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
             }
         }
     }

@@ -10,4 +10,8 @@
         color: white;
         font-size: var(--fs-200);
     }
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
