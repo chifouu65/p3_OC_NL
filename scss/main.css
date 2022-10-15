@@ -559,7 +559,7 @@ main .function__content .function__article article .icon i {
   height: 100%;
 }
 main .function__content .function__article article .text {
-  font-size: var(--fs-300);
+  font-size: var(--fs-200);
   font-weight: 600;
 }
 
