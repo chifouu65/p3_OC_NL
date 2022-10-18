@@ -1,16 +1,4 @@
-/*
-
-.foo {
-  color: red;
-
-  @include respond-to('medium') {
-    color: blue;
-  }
-}
-
-*/
-
-
+@use "./functions" as *;
 /// FlexBox
 /// @acces public
 /// @param {String} $direction - direction row, column
@@ -20,6 +8,7 @@
 /// @require $direction
 /// @require $justify
 /// @require $align
+/// 
 @mixin flexBox($gap,$direction,$justify,$align) {
   display: flex;
   gap: $gap + 0px;
@@ -35,3 +24,45 @@
   align-items: center;
   text-align: center;
 }
+
+@mixin heath {
+  fill: transparent;
+  stroke: var(--clr-secondary-200);
+  stroke-width: 20;
+  cursor: pointer;
+  position: relative;
+
+  svg {
+      overflow: visible;
+      width: 40px;
+      path {
+          stroke-dashoffset: 0;
+          stroke-dasharray: 1550;
+          transform-origin: center;
+      }
+  }
+  
+  &__background {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      stroke: none;
+  }
+
+  &__main:hover {
+      path {
+          animation: stroke-animation 2s ease-in-out forwards;
+      }
+
+  }
+
+  &__main:hover ~ &__background path {
+      path {
+          animation: stroke-animation 2s ease-in-out forwards;
+      }
+  }
+}
+
+
+

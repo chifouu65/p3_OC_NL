@@ -20,9 +20,6 @@
     transform: rotate(0);
   }
 }
-/*
-animation get stroke set 0 and size 100% to O to 100 == opacity 1
-*/
 @-webkit-keyframes stroke-animation {
   0% {
     stroke-dashoffset: 0;
@@ -73,56 +70,6 @@ animation get stroke set 0 and size 100% to O to 100 == opacity 1
     fill: var(--clr-secondary-200);
   }
 }
-.heart {
-  fill: transparent;
-  stroke: var(--clr-secondary-200);
-  stroke-width: 20;
-  cursor: pointer;
-  position: relative;
-}
-.heart svg {
-  overflow: visible;
-  width: 40px;
-}
-.heart svg path {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 1550;
-  transform-origin: center;
-}
-.heart__background {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  stroke: none;
-}
-.heart__main:hover path {
-  -webkit-animation: stroke-animation 2s ease-in-out forwards;
-          animation: stroke-animation 2s ease-in-out forwards;
-}
-.heart__main:hover ~ .heart__background path path {
-  -webkit-animation: stroke-animation 2s ease-in-out forwards;
-          animation: stroke-animation 2s ease-in-out forwards;
-}
-.heart svg {
-  width: 30px;
-  height: 30px;
-}
-.heart svg:hover {
-  transform: scale(1.1);
-}
-
-/*
-
-.foo {
-  color: red;
-
-  @include respond-to('medium') {
-    color: blue;
-  }
-}
-
-*/
 main .function__content .function__article article, main .restaurant__content .restaurant__content__article, main .container .box__menu, header nav, main .container .btn__menu__btn, header .header__content .explore__button {
   box-shadow: 5px 9px 18px -3px rgba(0, 0, 0, 0.29);
 }
@@ -133,17 +80,6 @@ main .function__content .function__article article:hover, main .restaurant__cont
 main .container .menu__title .text {
   font-family: "Shrikhand", cursive;
   font-size: 30px;
-}
-
-main .container .box__title {
-  font-size: 18px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-
-main .container .box__menu__text .desc {
-  font-size: 14px;
-  font-weight: 300;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -215,6 +151,45 @@ img {
 
 svg {
   width: 25px;
+}
+
+.heart {
+  fill: transparent;
+  stroke: var(--clr-secondary-200);
+  stroke-width: 20;
+  cursor: pointer;
+  position: relative;
+}
+.heart svg {
+  overflow: visible;
+  width: 40px;
+}
+.heart svg path {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1550;
+  transform-origin: center;
+}
+.heart__background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  stroke: none;
+}
+.heart__main:hover path {
+  -webkit-animation: stroke-animation 2s ease-in-out forwards;
+          animation: stroke-animation 2s ease-in-out forwards;
+}
+.heart__main:hover ~ .heart__background path path {
+  -webkit-animation: stroke-animation 2s ease-in-out forwards;
+          animation: stroke-animation 2s ease-in-out forwards;
+}
+.heart svg {
+  width: 30px;
+  height: 30px;
+}
+.heart svg:hover {
+  transform: scale(1.1);
 }
 
 main .container .btn__menu__btn, header .header__content .explore__button {
@@ -300,13 +275,10 @@ header .header__content .location {
   text-align: center;
   padding: 15px 0;
   width: 100%;
-}
-header .header__content .location i {
-  font-size: 15px;
+  font-size: var(--fs-300);
 }
 header .header__content .location input {
   width: 100px;
-  height: 100%;
   background-color: transparent;
   border: none;
   outline: none;

@@ -6,20 +6,14 @@
 
 %header__home {
 
-    //align items in center//
-    
     .location {
         @include flexBox(15,row,center,center);
         text-align: center;
         padding: 15px 0;
         width: 100%;
-
-        i {
-            font-size: 15px;
-        }
+        font-size: var(--fs-300);
         input {
             width: 100px;
-            height: 100%;
             background-color: transparent;
             border: none;
             outline: none;

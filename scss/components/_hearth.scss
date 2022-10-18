@@ -1,0 +1,12 @@
+@use "../abstract/mixins" as *;
+
+.heart { 
+    @include heath;
+    svg {
+        width: 30px;
+        height: 30px;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+  }

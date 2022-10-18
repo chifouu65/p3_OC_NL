@@ -1,7 +1,7 @@
 @use "../components/buttons" as *;
 @use "../abstract/mixins" as *;
 @use "../abstract/variables" as *;
-@use "../abstract/placeholders" as *;
+@use "../abstract/extensions" as *;
 
 header {
     nav {
@@ -46,7 +46,7 @@ main {
             padding: 40px 20px;
             @include flexBox(0,row,space-between,none);
             .text {
-                @extend %title; 
+                @extend %title;
                 font-size: var(--fs-600);
             }
         }
@@ -74,7 +74,6 @@ main {
                     border-right: 3px solid var(--clr-article-100);
                     width: 25%;
                 }
-                @extend %title__menu;
                 border-bottom: 3px solid var(--clr-article-100);
                 padding:5px 0;
                 width: 40px;
@@ -102,7 +101,6 @@ main {
                         font-size: var(--fs-300);
                     }
                     .desc {
-                        @extend %text__menu;
                         @include flexBox(0,row,space-between,none);
                         align-items: baseline;
                         .text {

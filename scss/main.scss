@@ -1,34 +1,29 @@
 @charset 'utf-8';
-
 @use "./abstract/functions" as *;
 @use "./abstract/mixins" as *;
-@use "./abstract/placeholders" as *;
+@use "./abstract/extensions" as *;
 @use "./abstract/variables" as *;
-
 @use "./base/reset" as *;
 @use "./base/typography" as *;
 @use "./base/colors" as *;
 @use "./base/media-query" as *;
-
+@use "./components/hearth" as *;
 @use "./components/buttons" as *;
 @use "./components/carousel" as *;
 @use "./components/carousel" as *;
-
 @use "./layout/footer" as *;
 @use "./layout/forms" as *;
 @use "./layout/grid" as *;
 @use "./layout/header" as *;
 @use "./layout/navigation" as *;
 @use "./layout/sidebar" as *;
-
 @use "./pages/menu" as *;
 @use "./pages/home" as *;
 @use "./pages/loader" as *;
-
 @use "./themes/theme" as *;
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 :root {
-    //fais une map sur la list de colors dans le file
     @each $color, $shades in $colors {
         @each $shade, $value in $shades {
             --clr-#{$color}-#{$shade}: #{$value};
@@ -49,8 +44,6 @@
         }
     }
 }
-
-//create class with attrib colors x values.
 @each $color, $shades in $colors {
     @each $shade, $value in $shades {
         .bg-#{$color}-#{$shade} {
@@ -58,10 +51,6 @@
         }
     }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-
 body {
     font-family: 'Roboto', sans-serif;
 }

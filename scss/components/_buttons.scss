@@ -1,5 +1,5 @@
 @use "../abstract/variables" as *;
-@use "../abstract/placeholders" as *;
+@use "../abstract/extensions" as *;
 
 %button {
     @extend %shadow;
