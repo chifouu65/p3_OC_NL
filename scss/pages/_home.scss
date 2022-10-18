@@ -2,12 +2,10 @@
 @use "../layout/navigation" as *;
 @use "../layout/footer" as *;
 @use "../components/articles" as *;
-
 @use "../abstract/mixins" as *;
 
 header {
     animation: transIn 1s;
-    
     nav {
         @extend %nav;
     }
@@ -23,8 +21,7 @@ main {
     .function {
         @media screen and (min-width: 40rem) {
             padding-bottom: 80px;
-        }
-        
+        } 
         padding: 0 20px;
         &__title {
             padding-top: 40px;
@@ -53,7 +50,6 @@ main {
     }
 
     .restaurant {
-        background-color: var(--clr-bg-100);
         padding: 0 20px;
         @media screen and (min-width: 40rem) {
             padding: 0 40px;

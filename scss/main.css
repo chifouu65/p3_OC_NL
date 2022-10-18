@@ -226,30 +226,12 @@ footer .title {
   font-size: var(--fs-400);
   font-family: "Shrikhand", cursive;
 }
-@media screen and (min-width: 60rem) {
-  footer {
-    display: flex;
-    gap: 0px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: none;
-  }
-}
 footer .text {
   display: flex;
   gap: 7px;
   flex-direction: column;
   justify-content: none;
   align-items: none;
-}
-@media screen and (min-width: 60rem) {
-  footer .text {
-    display: flex;
-    gap: 20px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: none;
-  }
 }
 footer .text a {
   color: white;
@@ -264,6 +246,24 @@ footer .text a {
 footer .text a i {
   width: 15px;
   height: 15px;
+}
+@media screen and (min-width: 60rem) {
+  footer .text {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: none;
+  }
+}
+@media screen and (min-width: 60rem) {
+  footer {
+    display: flex;
+    gap: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: none;
+  }
 }
 
 header .header__content .location {
@@ -602,7 +602,6 @@ main .function__content .function__article article {
   border-radius: 10px;
   padding: 15px 0px 15px 25px;
   margin-left: 10px;
-  margin-right: 10px;
   width: 100%;
 }
 @media screen and (min-width: 40rem) {
@@ -641,24 +640,6 @@ main .restaurant__content {
 main .restaurant__content .restaurant__content__article {
   overflow: hidden;
   border-radius: 20px;
-}
-@media screen and (min-width: 40rem) {
-  main .restaurant__content .restaurant__content__article {
-    display: flex;
-    gap: 20px;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: none;
-  }
-}
-@media screen and (min-width: 60rem) {
-  main .restaurant__content .restaurant__content__article {
-    display: flex;
-    gap: 20px;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: none;
-  }
 }
 main .restaurant__content .restaurant__content__article aside {
   position: absolute;
@@ -714,26 +695,6 @@ main .restaurant__content .restaurant__content__article .buttom {
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (min-width: 40rem) {
-  main .restaurant__content .restaurant__content__article .buttom {
-    display: flex;
-    gap: 20px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-  }
-}
-@media screen and (min-width: 60rem) {
-  main .restaurant__content .restaurant__content__article .buttom {
-    display: flex;
-    gap: 20px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%;
-  }
-}
 main .restaurant__content .restaurant__content__article .buttom .left {
   padding: 20px 0;
   display: flex;
@@ -757,6 +718,44 @@ main .restaurant__content .restaurant__content__article .buttom .left__title {
 }
 main .restaurant__content .restaurant__content__article .buttom .left__text {
   font-size: var(--fs-300);
+}
+@media screen and (min-width: 40rem) {
+  main .restaurant__content .restaurant__content__article .buttom {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 60rem) {
+  main .restaurant__content .restaurant__content__article .buttom {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 40rem) {
+  main .restaurant__content .restaurant__content__article {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: none;
+  }
+}
+@media screen and (min-width: 60rem) {
+  main .restaurant__content .restaurant__content__article {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: none;
+  }
 }
 
 header {
@@ -800,7 +799,6 @@ main .function .card-3 {
           animation: transIn 3s;
 }
 main .restaurant {
-  background-color: var(--clr-bg-100);
   padding: 0 20px;
 }
 @media screen and (min-width: 40rem) {
