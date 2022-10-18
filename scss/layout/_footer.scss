@@ -9,17 +9,8 @@
         font-size: var(--fs-400);
         font-family: "Shrikhand", cursive;
     }
-
-    @media screen and (min-width: 60rem) {
-        @include flexBox(0,row,space-between,none);
-    }
-
     .text {
         @include flexBox(7,column,none,none);
-
-        @media screen and (min-width: 60rem) {
-            @include flexBox(20,row,space-between,none);
-        }
         a {
             color: white;
             font-size: var(--fs-200);
@@ -30,5 +21,11 @@
                 height: 15px;
             }
         }
+        @media screen and (min-width: 60rem) {
+            @include flexBox(20,row,space-between,none);
+        }
+    }
+    @media screen and (min-width: 60rem) {
+        @include flexBox(0,row,space-between,none);
     }
 }
