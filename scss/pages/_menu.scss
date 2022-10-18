@@ -15,7 +15,7 @@ header {
 
 main {
     @include flexBox(0,column,space-between,none);
-
+ 
     .menu__img  {
         position: absolute;
         z-index: -1;
@@ -25,11 +25,18 @@ main {
         img {
             width: 100%;
             object-fit: cover;
+            @media screen and (min-width:60rem) {
+                max-height: 400px;
+            }
         }
     }
    
     .container {
         @include flexBox(20,column,space-between,none);
+        @media screen and (min-width:60rem) {
+            @include flexBox(50,column,space-between,none);
+        }
+ 
         width: 100%;
         border-radius: $borderR-top;
         z-index: 1;
@@ -44,9 +51,29 @@ main {
             }
         }
 
+        .entree {
+            animation: transIn 1s;
+        }
+
+        .plats {
+            animation: transIn 2s;
+        }
+
+        .desserts {
+            animation: transIn 3s;
+        }
         .box {
+            @media screen and (min-width:60rem) {
+                @include flexBox(20,row,flex-end,none);
+            }
             padding: 0px 20px;
             &__title {
+                @media screen and (min-width:60rem) {
+                    @include flexBox(0,none,center,center);
+                    border: 0;
+                    border-right: 3px solid var(--clr-article-100);
+                    width: 25%;
+                }
                 @extend %title__menu;
                 border-bottom: 3px solid var(--clr-article-100);
                 padding:5px 0;
@@ -54,6 +81,10 @@ main {
                 font-size: var(--fs-300);
             }
             &__menu {
+                @media screen and (min-width:60rem) {
+                    min-width: 25%;
+                    max-width: 25%;
+                }
                 margin:20px 0;
                 overflow: hidden;
                 display: flex;
@@ -84,11 +115,9 @@ main {
                         }
                     }
                 }
-
-               
+  
                 &__check {
                    border-radius: $borderR-right;
-                   background-color: var(--clr-article-100);
                    display: inline;
                    justify-content: center;
                    align-items: center;
@@ -150,12 +179,11 @@ main {
                     font-size: var(--fs-300);
                 }
                 min-width: 120px;
-                @extend %button__menu;
+                @extend %button;
             }
             padding-bottom: 40px;
         }
     }
-
 }
 
 footer {

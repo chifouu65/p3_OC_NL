@@ -50,7 +50,7 @@
     }
 }
 
-//create class with attrib colors x values
+//create class with attrib colors x values.
 @each $color, $shades in $colors {
     @each $shade, $value in $shades {
         .bg-#{$color}-#{$shade} {

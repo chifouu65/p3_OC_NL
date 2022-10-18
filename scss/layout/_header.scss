@@ -56,7 +56,7 @@
             }
         }
         &__button {
-            @extend %button__home;
+            @extend %button;
         }
     }
 }
