@@ -3,6 +3,7 @@
 @use "./abstract/mixins" as *;
 @use "./abstract/extensions" as *;
 @use "./abstract/variables" as *;
+@use "./base/map" as *;
 @use "./base/reset" as *;
 @use "./base/typography" as *;
 @use "./base/colors" as *;
@@ -23,34 +24,6 @@
 @use "./themes/theme" as *;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-:root {
-    @each $color, $shades in $colors {
-        @each $shade, $value in $shades {
-            --clr-#{$color}-#{$shade}: #{$value};
-        }
-    }
-    
-    @each $screen-size, $font-size in $type-scales {
-        @if $screen-size == small {
-            @each $size, $value in $font-size {
-                --fs-#{$size}: #{$value};
-            } 
-        } @else {
-            @include mq(small) {
-                @each $size, $value in $font-size {
-                    --fs-#{$size}: #{$value};
-                }
-            }
-        }
-    }
-}
-@each $color, $shades in $colors {
-    @each $shade, $value in $shades {
-        .bg-#{$color}-#{$shade} {
-            background-color: $value;
-        }
-    }
-}
 body {
     font-family: 'Roboto', sans-serif;
 }
