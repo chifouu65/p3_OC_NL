@@ -59,7 +59,9 @@ main {
         }
         .box {
             @media screen and (min-width:60rem) {
-                @include flexBox(20,row,flex-end,none);
+                @include flexBox(20,row,space-between,none);
+                flex-wrap: wrap;
+                padding: 0px 50px;
             }
             padding: 0px 20px;
             &__title {
@@ -69,10 +71,11 @@ main {
                 width: 40px;
                 font-size: var(--fs-300);
                 @media screen and (min-width:60rem) {
-                    @include flexBox(0,none,center,center);
                     border: 0;
-                    border-right: 3px solid var(--clr-article-100);
-                    width: 25%;
+                    border-bottom: 3px solid var(--clr-article-100);
+                    width:100%;
+                    font-size: var(--fs-300);
+                    margin: auto;
                 }
             }
             &__menu {
@@ -153,8 +156,10 @@ main {
                     }
                 }
                 @media screen and (min-width:60rem) {
-                    min-width: 25%;
-                    max-width: 25%;
+                    min-height: 100px;
+                    min-width: 200px;
+                    width: 30%;
+                    margin: 0;
                 }
             }
         }
@@ -178,5 +183,5 @@ main {
 }
 
 footer {
-
+    //
 }

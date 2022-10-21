@@ -10,12 +10,20 @@
         }
     }
     
+    // récup $screen-size (taille de l'écran "width")
+    // récup les tailles de font
+    // dans $type-scales
     @each $screen-size, $font-size in $type-scales {
+        // si $screen-size et == à small (40rem)
+        // alors on obtien la font-size "small"
         @if $screen-size == small {
             @each $size, $value in $font-size {
                 --fs-#{$size}: #{$value};
             } 
-        } @else {
+        }
+        // alors si elle != à 40rem,
+        // la font-size récupérer seras "large".
+        @else {
             @include mq(small) {
                 @each $size, $value in $font-size {
                     --fs-#{$size}: #{$value};

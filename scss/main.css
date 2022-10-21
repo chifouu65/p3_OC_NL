@@ -483,8 +483,10 @@ main .container .box {
     display: flex;
     gap: 20px;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: none;
+    flex-wrap: wrap;
+    padding: 0px 50px;
   }
 }
 main .container .box__title {
@@ -496,14 +498,11 @@ main .container .box__title {
 }
 @media screen and (min-width: 60rem) {
   main .container .box__title {
-    display: flex;
-    gap: 0px;
-    flex-direction: none;
-    justify-content: center;
-    align-items: center;
     border: 0;
-    border-right: 3px solid var(--clr-article-100);
-    width: 25%;
+    border-bottom: 3px solid var(--clr-article-100);
+    width: 100%;
+    font-size: var(--fs-300);
+    margin: auto;
   }
 }
 main .container .box__menu {
@@ -602,8 +601,10 @@ main .container .box__menu:hover .box__menu__check svg {
 }
 @media screen and (min-width: 60rem) {
   main .container .box__menu {
-    min-width: 25%;
-    max-width: 25%;
+    min-height: 100px;
+    min-width: 200px;
+    width: 30%;
+    margin: 0;
   }
 }
 main .container .btn__menu {
