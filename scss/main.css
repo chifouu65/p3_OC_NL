@@ -82,6 +82,74 @@ main .container .menu__title .text {
   font-size: 30px;
 }
 
+:root {
+  --clr-primary-100: hsl(267deg, 66%, 60%);
+  --clr-primary-200: hsl(267deg, 66%, 50%);
+  --clr-secondary-100: hsl(317deg, 100%, 74%);
+  --clr-secondary-200: hsl(317deg, 100%, 64%);
+  --clr-bg-100: hsl(0deg, 0%, 90%);
+  --clr-bg-200: hsl(0deg, 0%, 80%);
+  --clr-bg-300: hsl(0deg, 0%, 15%);
+  --clr-article-100: hsl(165deg, 56%, 74%);
+  --clr-article-200: hsl(165deg, 56%, 34%);
+  --fs-100: 0.72rem;
+  --fs-200: 0.8rem;
+  --fs-300: 0.9rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.5rem;
+  --fs-600: 2rem;
+  --fs-700: 2.441rem;
+  --fs-800: 3.052rem;
+}
+@media only screen and (min-width: 40rem) {
+  :root {
+    --fs-100: 1rem;
+    --fs-200: 1.2rem;
+    --fs-300: 1.5rem;
+    --fs-400: 1.8rem;
+    --fs-500: 2rem;
+    --fs-600: 2.827rem;
+    --fs-700: 4rem;
+    --fs-800: 5.635rem;
+  }
+}
+
+.bg-primary-100 {
+  background-color: hsl(267deg, 66%, 60%);
+}
+
+.bg-primary-200 {
+  background-color: hsl(267deg, 66%, 50%);
+}
+
+.bg-secondary-100 {
+  background-color: hsl(317deg, 100%, 74%);
+}
+
+.bg-secondary-200 {
+  background-color: hsl(317deg, 100%, 64%);
+}
+
+.bg-bg-100 {
+  background-color: hsl(0deg, 0%, 90%);
+}
+
+.bg-bg-200 {
+  background-color: hsl(0deg, 0%, 80%);
+}
+
+.bg-bg-300 {
+  background-color: hsl(0deg, 0%, 15%);
+}
+
+.bg-article-100 {
+  background-color: hsl(165deg, 56%, 74%);
+}
+
+.bg-article-200 {
+  background-color: hsl(165deg, 56%, 34%);
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -335,6 +403,10 @@ header nav .title {
   text-align: center;
 }
 
+header {
+  -webkit-animation: transIn 5s;
+          animation: transIn 5s;
+}
 header nav i {
   position: absolute;
   top: 20px;
@@ -347,6 +419,8 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: none;
+  -webkit-animation: transIn 6s;
+          animation: transIn 6s;
 }
 main .menu__img {
   position: absolute;
@@ -378,14 +452,17 @@ main .container {
   background-color: white;
   margin-top: 200px;
 }
-@media screen and (min-width: 60rem) {
-  main .container {
-    display: flex;
-    gap: 50px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: none;
-  }
+main .container .entree {
+  -webkit-animation: transIn 7s;
+          animation: transIn 7s;
+}
+main .container .plats {
+  -webkit-animation: transIn 7.5s;
+          animation: transIn 7.5s;
+}
+main .container .desserts {
+  -webkit-animation: transIn 8s;
+          animation: transIn 8s;
 }
 main .container .menu__title {
   padding: 40px 20px;
@@ -397,18 +474,6 @@ main .container .menu__title {
 }
 main .container .menu__title .text {
   font-size: var(--fs-600);
-}
-main .container .entree {
-  -webkit-animation: transIn 1s;
-          animation: transIn 1s;
-}
-main .container .plats {
-  -webkit-animation: transIn 2s;
-          animation: transIn 2s;
-}
-main .container .desserts {
-  -webkit-animation: transIn 3s;
-          animation: transIn 3s;
 }
 main .container .box {
   padding: 0px 20px;
@@ -423,6 +488,7 @@ main .container .box {
   }
 }
 main .container .box__title {
+  text-transform: uppercase;
   border-bottom: 3px solid var(--clr-article-100);
   padding: 5px 0;
   width: 40px;
@@ -446,12 +512,6 @@ main .container .box__menu {
   display: flex;
   flex-direction: row;
   border-radius: 10px;
-}
-@media screen and (min-width: 60rem) {
-  main .container .box__menu {
-    min-width: 25%;
-    max-width: 25%;
-  }
 }
 main .container .box__menu__text {
   display: flex;
@@ -540,6 +600,12 @@ main .container .box__menu:hover .box__menu__check svg {
     transform: rotate3d(0, 0, 1, 360deg);
   }
 }
+@media screen and (min-width: 60rem) {
+  main .container .box__menu {
+    min-width: 25%;
+    max-width: 25%;
+  }
+}
 main .container .btn__menu {
   display: flex;
   justify-content: center;
@@ -551,6 +617,15 @@ main .container .btn__menu__btn {
 }
 main .container .btn__menu__btn a {
   font-size: var(--fs-300);
+}
+@media screen and (min-width: 60rem) {
+  main {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: none;
+  }
 }
 
 main .function__content {
@@ -564,7 +639,7 @@ main .function__content {
 @media screen and (min-width: 40rem) {
   main .function__content {
     display: flex;
-    gap: 0px;
+    gap: 20px;
     flex-direction: row;
     justify-content: center;
     align-items: none;
@@ -759,12 +834,12 @@ main .restaurant__content .restaurant__content__article .buttom .left__text {
 }
 
 header {
-  -webkit-animation: transIn 1s;
-          animation: transIn 1s;
+  -webkit-animation: transIn 4s;
+          animation: transIn 4s;
 }
 main {
-  -webkit-animation: transIn 2s;
-          animation: transIn 2s;
+  -webkit-animation: transIn 5s;
+          animation: transIn 5s;
 }
 main .function {
   padding: 0 20px;
@@ -787,16 +862,16 @@ main .function__title {
   }
 }
 main .function .card-1 {
-  -webkit-animation: transIn 2s;
-          animation: transIn 2s;
+  -webkit-animation: transIn 7s;
+          animation: transIn 7s;
 }
 main .function .card-2 {
-  -webkit-animation: transIn 2.5s;
-          animation: transIn 2.5s;
+  -webkit-animation: transIn 7.5s;
+          animation: transIn 7.5s;
 }
 main .function .card-3 {
-  -webkit-animation: transIn 3s;
-          animation: transIn 3s;
+  -webkit-animation: transIn 8s;
+          animation: transIn 8s;
 }
 main .restaurant {
   padding: 0 20px;
@@ -906,74 +981,6 @@ main .restaurant__content {
     z-index: 10;
     background-color: blue;
   }
-}
-
-:root {
-  --clr-primary-100: hsl(267deg, 66%, 60%);
-  --clr-primary-200: hsl(267deg, 66%, 50%);
-  --clr-secondary-100: hsl(317deg, 100%, 74%);
-  --clr-secondary-200: hsl(317deg, 100%, 64%);
-  --clr-bg-100: hsl(0deg, 0%, 90%);
-  --clr-bg-200: hsl(0deg, 0%, 80%);
-  --clr-bg-300: hsl(0deg, 0%, 15%);
-  --clr-article-100: hsl(165deg, 56%, 74%);
-  --clr-article-200: hsl(165deg, 56%, 34%);
-  --fs-100: 0.72rem;
-  --fs-200: 0.8rem;
-  --fs-300: 0.9rem;
-  --fs-400: 1.125rem;
-  --fs-500: 1.5rem;
-  --fs-600: 2rem;
-  --fs-700: 2.441rem;
-  --fs-800: 3.052rem;
-}
-@media only screen and (min-width: 40rem) {
-  :root {
-    --fs-100: 1rem;
-    --fs-200: 1.2rem;
-    --fs-300: 1.5rem;
-    --fs-400: 1.8rem;
-    --fs-500: 2rem;
-    --fs-600: 2.827rem;
-    --fs-700: 4rem;
-    --fs-800: 5.635rem;
-  }
-}
-
-.bg-primary-100 {
-  background-color: hsl(267deg, 66%, 60%);
-}
-
-.bg-primary-200 {
-  background-color: hsl(267deg, 66%, 50%);
-}
-
-.bg-secondary-100 {
-  background-color: hsl(317deg, 100%, 74%);
-}
-
-.bg-secondary-200 {
-  background-color: hsl(317deg, 100%, 64%);
-}
-
-.bg-bg-100 {
-  background-color: hsl(0deg, 0%, 90%);
-}
-
-.bg-bg-200 {
-  background-color: hsl(0deg, 0%, 80%);
-}
-
-.bg-bg-300 {
-  background-color: hsl(0deg, 0%, 15%);
-}
-
-.bg-article-100 {
-  background-color: hsl(165deg, 56%, 74%);
-}
-
-.bg-article-200 {
-  background-color: hsl(165deg, 56%, 34%);
 }
 
 body {

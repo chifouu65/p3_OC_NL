@@ -5,7 +5,7 @@
 @use "../abstract/mixins" as *;
 
 header {
-    animation: transIn 1s;
+    animation: transIn 4s;
     nav {
         @extend %nav;
     }
@@ -16,7 +16,7 @@ header {
 }
 
 main {
-    animation: transIn 2s;
+    animation: transIn 5s;
 
     .function {
         @media screen and (min-width: 40rem) {
@@ -38,13 +38,13 @@ main {
             @extend %article_function;   
         }
         .card-1 {
-            animation: transIn 2s ;
+            animation: transIn 7s ;
         }
         .card-2 {
-            animation: transIn 2.5s ;
+            animation: transIn 7.5s ;
         }
         .card-3 {
-            animation: transIn 3s ;
+            animation: transIn 8s ;
         }
 
     }

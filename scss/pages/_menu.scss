@@ -4,6 +4,7 @@
 @use "../abstract/extensions" as *;
 
 header {
+    animation: transIn 5s;
     nav {
         i {
             position: absolute;
@@ -15,7 +16,7 @@ header {
 
 main {
     @include flexBox(0,column,space-between,none);
- 
+    animation: transIn 6s;
     .menu__img  {
         position: absolute;
         z-index: -1;
@@ -32,11 +33,17 @@ main {
     }
    
     .container {
-        @include flexBox(20,column,space-between,none);
-        @media screen and (min-width:60rem) {
-            @include flexBox(50,column,space-between,none);
+        .entree {
+            animation: transIn 7s;
         }
- 
+        .plats {
+            animation: transIn 7.5s;
+        }
+        .desserts {
+            animation: transIn 8s;
+        }
+
+        @include flexBox(20,column,space-between,none);
         width: 100%;
         border-radius: $borderR-top;
         z-index: 1;
@@ -50,52 +57,36 @@ main {
                 font-size: var(--fs-600);
             }
         }
-
-        .entree {
-            animation: transIn 1s;
-        }
-
-        .plats {
-            animation: transIn 2s;
-        }
-
-        .desserts {
-            animation: transIn 3s;
-        }
         .box {
             @media screen and (min-width:60rem) {
                 @include flexBox(20,row,flex-end,none);
             }
             padding: 0px 20px;
             &__title {
+                text-transform: uppercase;
+                border-bottom: 3px solid var(--clr-article-100);
+                padding:5px 0;
+                width: 40px;
+                font-size: var(--fs-300);
                 @media screen and (min-width:60rem) {
                     @include flexBox(0,none,center,center);
                     border: 0;
                     border-right: 3px solid var(--clr-article-100);
                     width: 25%;
                 }
-                border-bottom: 3px solid var(--clr-article-100);
-                padding:5px 0;
-                width: 40px;
-                font-size: var(--fs-300);
             }
             &__menu {
-                @media screen and (min-width:60rem) {
-                    min-width: 25%;
-                    max-width: 25%;
-                }
+                @extend %shadow;
                 margin:20px 0;
                 overflow: hidden;
                 display: flex;
                 flex-direction: row;
-                @extend %shadow;
                 border-radius: $borderR;
 
                 &__text {
                     @include flexBox(0,column,space-between,none);
                     width: 100%;
                     padding: 10px 0px 10px 10px;
-                    
                     .title {
                         font-weight: 600;
                         font-size: var(--fs-300);
@@ -113,7 +104,6 @@ main {
                         }
                     }
                 }
-  
                 &__check {
                    border-radius: $borderR-right;
                    display: inline;
@@ -129,45 +119,45 @@ main {
                     border-radius: $borderR-50;
                    }
                 }
-
                 &:hover {
-                    
                     .box__menu__check {
                         width: 25%;
                         display: flex;
                         transform: translateX(0);
                         transition: 0.5s ease-in-out;
                         svg {
+                            @keyframes rotate {
+                                0% {
+                                  -webkit-transform: rotate3d(0, 0, 1, 0deg);
+                                  transform: rotate3d(0, 0, 1, 0deg);
+                                }
+                                25% {
+                                  -webkit-transform: rotate3d(0, 0, 1, 90deg);
+                                  transform: rotate3d(0, 0, 1, 90deg);
+                                }
+                                50% {
+                                  -webkit-transform: rotate3d(0, 0, 1, 180deg);
+                                  transform: rotate3d(0, 0, 1, 180deg);
+                                }
+                                75% {
+                                  -webkit-transform: rotate3d(0, 0, 1, 270deg);
+                                  transform: rotate3d(0, 0, 1, 270deg);
+                                }
+                                100% {
+                                  -webkit-transform: rotate3d(0, 0, 1, 360deg);
+                                  transform: rotate3d(0, 0, 1, 360deg);
+                                }
+                            }
                             animation: 0.35s rotate 0.15s linear;
                         }
                     }
                 }
-                
-                @keyframes rotate {
-                    0% {
-                      -webkit-transform: rotate3d(0, 0, 1, 0deg);
-                      transform: rotate3d(0, 0, 1, 0deg);
-                    }
-                    25% {
-                      -webkit-transform: rotate3d(0, 0, 1, 90deg);
-                      transform: rotate3d(0, 0, 1, 90deg);
-                    }
-                    50% {
-                      -webkit-transform: rotate3d(0, 0, 1, 180deg);
-                      transform: rotate3d(0, 0, 1, 180deg);
-                    }
-                    75% {
-                      -webkit-transform: rotate3d(0, 0, 1, 270deg);
-                      transform: rotate3d(0, 0, 1, 270deg);
-                    }
-                    100% {
-                      -webkit-transform: rotate3d(0, 0, 1, 360deg);
-                      transform: rotate3d(0, 0, 1, 360deg);
-                    }
+                @media screen and (min-width:60rem) {
+                    min-width: 25%;
+                    max-width: 25%;
                 }
             }
         }
-        
         .btn__menu {
             display: flex;
             justify-content: center;
@@ -181,6 +171,9 @@ main {
             }
             padding-bottom: 40px;
         }
+    }
+    @media screen and (min-width:60rem) {
+        @include flexBox(50,column,space-between,none);
     }
 }
 
