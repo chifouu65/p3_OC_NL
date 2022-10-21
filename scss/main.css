@@ -87,7 +87,7 @@ main .container .menu__title .text {
   --clr-primary-200: hsl(267deg, 66%, 50%);
   --clr-secondary-100: hsl(317deg, 100%, 74%);
   --clr-secondary-200: hsl(317deg, 100%, 64%);
-  --clr-bg-100: hsl(0deg, 0%, 90%);
+  --clr-bg-100: hsl(0deg, 0%, 95%);
   --clr-bg-200: hsl(0deg, 0%, 80%);
   --clr-bg-300: hsl(0deg, 0%, 15%);
   --clr-article-100: hsl(165deg, 56%, 74%);
@@ -131,7 +131,7 @@ main .container .menu__title .text {
 }
 
 .bg-bg-100 {
-  background-color: hsl(0deg, 0%, 90%);
+  background-color: hsl(0deg, 0%, 95%);
 }
 
 .bg-bg-200 {
@@ -449,7 +449,7 @@ main .container {
   width: 100%;
   border-radius: 20px 20px 0 0;
   z-index: 1;
-  background-color: white;
+  background-color: var(--clr-bg-100);
   margin-top: 200px;
 }
 main .container .entree {
@@ -511,6 +511,7 @@ main .container .box__menu {
   display: flex;
   flex-direction: row;
   border-radius: 10px;
+  background-color: white;
 }
 main .container .box__menu__text {
   display: flex;
@@ -716,6 +717,7 @@ main .restaurant__content {
 main .restaurant__content .restaurant__content__article {
   overflow: hidden;
   border-radius: 20px;
+  background-color: white;
 }
 main .restaurant__content .restaurant__content__article aside {
   position: absolute;

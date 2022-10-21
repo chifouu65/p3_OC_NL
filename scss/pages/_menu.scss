@@ -47,7 +47,7 @@ main {
         width: 100%;
         border-radius: $borderR-top;
         z-index: 1;
-        background-color: white;
+        background-color: var(--clr-bg-100);
         margin-top: 200px;
         .menu__title {
             padding: 40px 20px;
@@ -85,7 +85,7 @@ main {
                 display: flex;
                 flex-direction: row;
                 border-radius: $borderR;
-
+                background-color: white;
                 &__text {
                     @include flexBox(0,column,space-between,none);
                     width: 100%;
