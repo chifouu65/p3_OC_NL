@@ -15,7 +15,7 @@ header {
 }
 
 main {
-    @include flexBox(0,column,space-between,none);
+    @include flexBox(0,column,space-between,flex-start);
     animation: transIn 6s;
     .menu__img  {
         position: absolute;
@@ -43,7 +43,7 @@ main {
             animation: transIn 8s;
         }
 
-        @include flexBox(20,column,space-between,none);
+        @include flexBox(20,column,space-between,flex-start);
         width: 100%;
         border-radius: $borderR-top;
         z-index: 1;
@@ -51,7 +51,7 @@ main {
         margin-top: 200px;
         .menu__title {
             padding: 40px 20px;
-            @include flexBox(0,row,space-between,none);
+            @include flexBox(0,row,space-between,flex-start);
             .text {
                 @extend %title;
                 font-size: var(--fs-600);
@@ -59,7 +59,7 @@ main {
         }
         .box {
             @media screen and (min-width: 992px) {
-                @include flexBox(20,row,space-between,none);
+                @include flexBox(20,row,space-between,flex-start);
                 flex-wrap: wrap;
                 padding: 0px 50px;
             }
@@ -87,7 +87,7 @@ main {
                 border-radius: $borderR;
                 background-color: white;
                 &__text {
-                    @include flexBox(0,column,space-between,none);
+                    @include flexBox(0,column,space-between,flex-start);
                     width: 100%;
                     padding: 10px 0px 10px 10px;
                     .title {
@@ -95,7 +95,7 @@ main {
                         font-size: var(--fs-300);
                     }
                     .desc {
-                        @include flexBox(0,row,space-between,none);
+                        @include flexBox(0,row,space-between,flex-start);
                         align-items: baseline;
                         .text {
                             font-size: var(--fs-200);
@@ -178,7 +178,7 @@ main {
         }
     }
     @media screen and (min-width: 992px) {
-        @include flexBox(50,column,space-between,none);
+        @include flexBox(50,column,space-between,flex-start);
     }
 }
 

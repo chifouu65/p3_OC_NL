@@ -6,7 +6,7 @@
 %article_function {
     @include flexBox(15,column,flex-start,space-between);
     @media screen and (min-width: 768px) {
-        @include flexBox(20,row,center,none);
+        @include flexBox(20,row,center,flex-start);
     }
     padding-bottom: 40px;
     .function__article {
