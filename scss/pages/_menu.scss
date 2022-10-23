@@ -43,7 +43,7 @@ main {
             animation: transIn 8s;
         }
 
-        @include flexBox(20,column,space-between,flex-start);
+        @include flexBox(20,column,space-between,stretch);
         width: 100%;
         border-radius: $borderR-top;
         z-index: 1;

@@ -461,7 +461,7 @@ main .container {
   gap: 20px;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   width: 100%;
   border-radius: 20px 20px 0 0;
   z-index: 1;
@@ -650,8 +650,8 @@ main .function__content {
   display: flex;
   gap: 15px;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: space-between;
+  justify-content: space-between;
+  align-items: stretch;
   padding-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
@@ -660,14 +660,14 @@ main .function__content {
     gap: 20px;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
   }
 }
 main .function__content .function__article {
   display: flex;
   gap: 0px;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 }
 main .function__content .function__article .number {
@@ -728,7 +728,7 @@ main .restaurant__content {
   gap: 20px;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: space-between;
+  align-items: stretch;
 }
 main .restaurant__content .restaurant__content__article {
   overflow: hidden;
@@ -795,7 +795,7 @@ main .restaurant__content .restaurant__content__article .buttom .left {
   gap: 5px;
   flex-direction: column;
   justify-content: space-between;
-  align-items: space-between;
+  align-items: flex-start;
 }
 @media screen and (min-width: 768px) {
   main .restaurant__content .restaurant__content__article .buttom .left {
@@ -859,6 +859,7 @@ header {
 main {
   -webkit-animation: transIn 5s;
           animation: transIn 5s;
+  align-items: stretch;
 }
 main .function {
   padding: 0 20px;

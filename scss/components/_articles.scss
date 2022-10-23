@@ -4,13 +4,13 @@
 @use "../abstract/functions" as *;
 
 %article_function {
-    @include flexBox(15,column,flex-start,space-between);
+    @include flexBox(15,column,space-between,stretch);
     @media screen and (min-width: 768px) {
-        @include flexBox(20,row,center,flex-start);
+        @include flexBox(20,row,center,stretch);
     }
     padding-bottom: 40px;
     .function__article {
-        @include flexBox(0,row,flex-start,center);
+        @include flexBox(0,row,space-between,center);
         .number {
             @include flexBox(0,row,center,center);
             border-radius: 50%;
@@ -58,7 +58,7 @@
 }
 
 %article_restaurants {
-    @include flexBox(20,column,flex-start, space-between);
+    @include flexBox(20,column,flex-start, stretch);
      
     .restaurant__content__article {
         
@@ -108,7 +108,7 @@
             @include flexBox(0,row,space-between,center);
             .left {
                 padding:20px 0;
-                @include flexBox(5,column,space-between,space-between);
+                @include flexBox(5,column,space-between,flex-start);
                 @media screen and (min-width: 768px) {
                     @include flexBox(40,column,space-between,flex-start);
                 }
