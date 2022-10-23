@@ -20,17 +20,60 @@
     transform: rotate(0);
   }
 }
+@-webkit-keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    fill: var(--clr-secondary-200);
+    transform: scale(1.1);
+  }
+  80% {
+    fill: var(--clr-secondary-200);
+    transform: scale(1);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: var(--clr-secondary-200);
+  }
+}
+@keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    fill: var(--clr-secondary-200);
+    transform: scale(1.1);
+  }
+  80% {
+    fill: var(--clr-secondary-200);
+    transform: scale(1);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: var(--clr-secondary-200);
+  }
+}
 /*
-
 @keyframes stroke-animation {
     0% {
         stroke-dashoffset: 0;
     }
+    30% {
+        stroke-dashoffset: 1550;
+    }
 
-    50% {
+    60% {
+        stroke-dashoffset: 3100;
+        fill: transparent;
+        transform: scale(1);
+    }
+
+    70% {
         fill: var(--clr-secondary-200);
         transform: scale(1.1);
     }
+
 
     80% {
         fill: var(--clr-secondary-200);
@@ -38,62 +81,11 @@
     }
 
     100% {
-        stroke-dashoffset: 0;
+        stroke-dashoffset: 3100;
         fill: var(--clr-secondary-200);
     }
 }
-
 */
-@-webkit-keyframes stroke-animation {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  30% {
-    stroke-dashoffset: 1550;
-  }
-  60% {
-    stroke-dashoffset: 3100;
-    fill: transparent;
-    transform: scale(1);
-  }
-  70% {
-    fill: var(--clr-secondary-200);
-    transform: scale(1.1);
-  }
-  80% {
-    fill: var(--clr-secondary-200);
-    transform: scale(1);
-  }
-  100% {
-    stroke-dashoffset: 3100;
-    fill: var(--clr-secondary-200);
-  }
-}
-@keyframes stroke-animation {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  30% {
-    stroke-dashoffset: 1550;
-  }
-  60% {
-    stroke-dashoffset: 3100;
-    fill: transparent;
-    transform: scale(1);
-  }
-  70% {
-    fill: var(--clr-secondary-200);
-    transform: scale(1.1);
-  }
-  80% {
-    fill: var(--clr-secondary-200);
-    transform: scale(1);
-  }
-  100% {
-    stroke-dashoffset: 3100;
-    fill: var(--clr-secondary-200);
-  }
-}
 main .function__content .function__article article, main .restaurant__content .restaurant__content__article, main .container .box__menu, header nav, main .container .btn__menu__btn, header .header__content .explore__button {
   box-shadow: 5px 9px 18px -3px rgba(0, 0, 0, 0.29);
 }
