@@ -803,7 +803,7 @@ main .restaurant__content .restaurant__content__article .buttom .left {
     gap: 40px;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 main .restaurant__content .restaurant__content__article .buttom .left__title {
@@ -819,7 +819,7 @@ main .restaurant__content .restaurant__content__article .buttom .left__text {
     gap: 20px;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 80%;
   }
 }
@@ -829,7 +829,7 @@ main .restaurant__content .restaurant__content__article .buttom .left__text {
     gap: 20px;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 50%;
   }
 }

@@ -110,7 +110,7 @@
                 padding:20px 0;
                 @include flexBox(5,column,space-between,space-between);
                 @media screen and (min-width: 768px) {
-                    @include flexBox(40,column,space-between,center);
+                    @include flexBox(40,column,space-between,flex-start);
                 }
                 &__title {
                     font-size: var(--fs-400);
@@ -121,11 +121,11 @@
                 }
             }
             @media screen and (min-width: 768px) {
-                @include flexBox(20,row,space-between,center);
+                @include flexBox(20,row,space-between,flex-start);
                 width: 80%;
             }
             @media screen and (min-width: 992px) {
-                @include flexBox(20,row,space-between,center);
+                @include flexBox(20,row,space-between,flex-start);
                 width: 50%;
             } 
         }
