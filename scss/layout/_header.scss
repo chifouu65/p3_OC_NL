@@ -24,7 +24,7 @@
     .explore {
         @include flexBox(15,column,center,center);
         text-align: center;
-        @media screen and (min-width:60rem) {
+        @media screen and (min-width: 992px) {
             @include flexBox(15,row,center,center);
             max-width: 1000px;
             margin: auto;
@@ -36,7 +36,7 @@
             width: 60%;
             font-weight: 600;
             font-size: var(--fs-500);
-            @media screen and (min-width:60rem) {
+            @media screen and (min-width: 992px) {
                 width: 100%;
             }
         }
@@ -45,7 +45,7 @@
             font-size: var(--fs-300);
             margin-bottom: 10px;
             font-weight: 300;
-            @media screen and (min-width:60rem) {
+            @media screen and (min-width: 992px) {
                 width: 100%;
             }
         }

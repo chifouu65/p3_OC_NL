@@ -1,7 +1,7 @@
 @use "../abstract/mixins" as *;
 
 %footer {
-    @include flexBox(20,column,none,none);
+    @include flexBox(20,column,flex-start,flex-start);
     padding: 20px;
     padding-bottom: 40px;
     color: white;
@@ -10,22 +10,22 @@
         font-family: "Shrikhand", cursive;
     }
     .text {
-        @include flexBox(7,column,none,none);
+        @include flexBox(7,column,flex-start,flex-start);
         a {
             color: white;
             font-size: var(--fs-200);
             font-weight: 500;
-            @include flexBox(10,row,none,none);
+            @include flexBox(10,row,flex-start,flex-start);
             i {
                 width: 15px;
                 height: 15px;
             }
         }
-        @media screen and (min-width: 60rem) {
-            @include flexBox(20,row,space-between,none);
+        @media screen and (min-width: 992px) {
+            @include flexBox(20,row,space-between,flex-start);
         }
     }
-    @media screen and (min-width: 60rem) {
-        @include flexBox(0,row,space-between,none);
+    @media screen and (min-width: 992px) {
+        @include flexBox(0,row,space-between,flex-start);
     }
 }

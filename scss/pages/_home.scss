@@ -19,7 +19,7 @@ main {
     animation: transIn 5s;
 
     .function {
-        @media screen and (min-width: 40rem) {
+        @media screen and (min-width: 768px) {
             padding-bottom: 80px;
         } 
         padding: 0 20px;
@@ -29,7 +29,7 @@ main {
             font-size: var(--fs-500);
             font-weight: 600;
 
-            @media screen and (min-width: 40rem) {
+            @media screen and (min-width: 768px) {
                 text-align: center;
                 padding: 80px 0px 40px 0px;
             }
@@ -51,7 +51,7 @@ main {
 
     .restaurant {
         padding: 0 20px;
-        @media screen and (min-width: 40rem) {
+        @media screen and (min-width: 768px) {
             padding: 0 40px;
         }
         &__title {
@@ -59,7 +59,7 @@ main {
             padding-bottom: 20px;
             font-size: var(--fs-500);
             font-weight: 600;
-            @media screen and (min-width: 40rem) {
+            @media screen and (min-width: 768px) {
                 text-align: center;
             }
         }

@@ -4,8 +4,8 @@
 @use "../abstract/functions" as *;
 
 %article_function {
-    @include flexBox(15,column,none,none);
-    @media screen and (min-width: 40rem) {
+    @include flexBox(15,column,flex-start,space-between);
+    @media screen and (min-width: 768px) {
         @include flexBox(20,row,center,none);
     }
     padding-bottom: 40px;
@@ -25,8 +25,8 @@
         }
         article {
             @extend %shadow;
-            @include flexBox(20,row,none,center);
-            @media screen and (min-width: 40rem) {
+            @include flexBox(20,row,flex-start,center);
+            @media screen and (min-width: 768px) {
                 padding: 15px 25px 15px 25px
             }
             border-radius: 10px;
@@ -58,7 +58,7 @@
 }
 
 %article_restaurants {
-    @include flexBox(20,column,none,none);
+    @include flexBox(20,column,flex-start, space-between);
      
     .restaurant__content__article {
         
@@ -75,14 +75,14 @@
             color: var(--clr-article-200);
             font-weight: 600;
             border-radius: 5px;
-            @media screen and (min-width: 40rem) {
+            @media screen and (min-width: 768px) {
                 right: 40px;
             }
         }
         .img {
             max-height: 180px;
             height: 180px;
-            @media screen and (min-width: 60rem) {
+            @media screen and (min-width: 992px) {
                 min-width: 50%;
                 width: 50%;
                 max-width: 50%;
@@ -91,12 +91,12 @@
                 max-height: 100%;
                 width: 100%;
                 object-fit: cover;
-                @media screen and (min-width: 40rem) {
+                @media screen and (min-width: 768px) {
                     min-width: 180px;
                     max-width: 180px;
                     min-height: 180px;
                 }
-                @media screen and (min-width: 60rem) {
+                @media screen and (min-width: 992px) {
                     min-width: 100%;
                     width: 100%;
                     max-width: 100%;
@@ -108,9 +108,9 @@
             @include flexBox(0,row,space-between,center);
             .left {
                 padding:20px 0;
-                @include flexBox(5,column,space-between,none);
-                @media screen and (min-width: 40rem) {
-                    @include flexBox(40,column,space-between,none);
+                @include flexBox(5,column,space-between,space-between);
+                @media screen and (min-width: 768px) {
+                    @include flexBox(40,column,space-between,center);
                 }
                 &__title {
                     font-size: var(--fs-400);
@@ -120,20 +120,20 @@
                     font-size: var(--fs-300);
                 }
             }
-            @media screen and (min-width: 40rem) {
+            @media screen and (min-width: 768px) {
                 @include flexBox(20,row,space-between,center);
                 width: 80%;
             }
-            @media screen and (min-width: 60rem) {
+            @media screen and (min-width: 992px) {
                 @include flexBox(20,row,space-between,center);
                 width: 50%;
             } 
         }
-        @media screen and (min-width: 40rem) {
-            @include flexBox(20,row,flex-start,none);
+        @media screen and (min-width: 768px) {
+            @include flexBox(20,row,flex-start,center);
         }
-        @media screen and (min-width: 60rem) {
-            @include flexBox(20,row,flex-start,none);
+        @media screen and (min-width: 992px) {
+            @include flexBox(20,row,flex-start,center);
         }
     }
 }

@@ -5,9 +5,6 @@
 /// @param {String} $justify - position justify-content
 /// @param {String} $align - Position align-item
 /// @param {Int} $gap - gap
-/// @require $direction
-/// @require $justify
-/// @require $align
 /// 
 @mixin flexBox($gap,$direction,$justify,$align) {
   display: flex;

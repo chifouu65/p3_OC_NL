@@ -26,7 +26,7 @@ main {
         img {
             width: 100%;
             object-fit: cover;
-            @media screen and (min-width:60rem) {
+            @media screen and (min-width: 992px) {
                 max-height: 400px;
             }
         }
@@ -58,7 +58,7 @@ main {
             }
         }
         .box {
-            @media screen and (min-width:60rem) {
+            @media screen and (min-width: 992px) {
                 @include flexBox(20,row,space-between,none);
                 flex-wrap: wrap;
                 padding: 0px 50px;
@@ -70,7 +70,7 @@ main {
                 padding:5px 0;
                 width: 40px;
                 font-size: var(--fs-300);
-                @media screen and (min-width:60rem) {
+                @media screen and (min-width: 992px) {
                     border: 0;
                     border-bottom: 3px solid var(--clr-article-100);
                     width:100%;
@@ -155,7 +155,7 @@ main {
                         }
                     }
                 }
-                @media screen and (min-width:60rem) {
+                @media screen and (min-width: 992px) {
                     min-height: 100px;
                     min-width: 200px;
                     width: 30%;
@@ -177,7 +177,7 @@ main {
             padding-bottom: 40px;
         }
     }
-    @media screen and (min-width:60rem) {
+    @media screen and (min-width: 992px) {
         @include flexBox(50,column,space-between,none);
     }
 }
