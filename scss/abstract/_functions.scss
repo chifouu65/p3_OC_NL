@@ -12,6 +12,30 @@
     }
 }
 
+/*
+
+@keyframes stroke-animation {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        fill: var(--clr-secondary-200);
+        transform: scale(1.1);
+    }
+
+    80% {
+        fill: var(--clr-secondary-200);
+        transform: scale(1);
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        fill: var(--clr-secondary-200);
+    }
+}
+
+*/
 @keyframes stroke-animation {
     0% {
         stroke-dashoffset: 0;
@@ -26,7 +50,7 @@
         transform: scale(1);
     }
 
-    80% {
+    70% {
         fill: var(--clr-secondary-200);
         transform: scale(1.1);
     }
