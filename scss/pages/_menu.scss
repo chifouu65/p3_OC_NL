@@ -4,7 +4,7 @@
 @use "../abstract/extensions" as *;
 
 header {
-    animation: transIn 5s;
+    animation: transIn 1s;
     nav {
         i {
             position: absolute;
@@ -16,7 +16,7 @@ header {
 
 main {
     @include flexBox(0,column,space-between,flex-start);
-    animation: transIn 6s;
+    animation: transIn 2s;
     .menu__img  {
         position: absolute;
         z-index: -1;
@@ -34,13 +34,13 @@ main {
    
     .container {
         .entree {
-            animation: transIn 7s;
+            animation: transIn 3s;
         }
         .plats {
-            animation: transIn 7.5s;
+            animation: transIn 5s;
         }
         .desserts {
-            animation: transIn 8s;
+            animation: transIn 7s;
         }
 
         @include flexBox(20,column,space-between,stretch);

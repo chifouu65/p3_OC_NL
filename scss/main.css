@@ -420,8 +420,8 @@ header nav .title {
 }
 
 header {
-  -webkit-animation: transIn 5s;
-          animation: transIn 5s;
+  -webkit-animation: transIn 1s;
+          animation: transIn 1s;
 }
 header nav i {
   position: absolute;
@@ -435,8 +435,8 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  -webkit-animation: transIn 6s;
-          animation: transIn 6s;
+  -webkit-animation: transIn 2s;
+          animation: transIn 2s;
 }
 main .menu__img {
   position: absolute;
@@ -469,16 +469,16 @@ main .container {
   margin-top: 200px;
 }
 main .container .entree {
-  -webkit-animation: transIn 7s;
-          animation: transIn 7s;
+  -webkit-animation: transIn 3s;
+          animation: transIn 3s;
 }
 main .container .plats {
-  -webkit-animation: transIn 7.5s;
-          animation: transIn 7.5s;
+  -webkit-animation: transIn 5s;
+          animation: transIn 5s;
 }
 main .container .desserts {
-  -webkit-animation: transIn 8s;
-          animation: transIn 8s;
+  -webkit-animation: transIn 7s;
+          animation: transIn 7s;
 }
 main .container .menu__title {
   padding: 40px 20px;
